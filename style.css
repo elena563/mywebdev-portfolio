@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    font-family: sans-serif;
+}
+@font-face {
+	font-family: 'Coolvetica';
+	src: local('Coolvetica'), url('Coolvetica.ttf') format('truetype');
+	}
+h1, h2, h3, h4{
+    font-family: "Coolvetica", sans-serif;
+}
+h2{
+    font-size: 190%;
+}
+h3{
+    font-size: 150%;
+}
+h4{
+    font-size: 130%;
+}
+.logo{
+    display: flex;
+    letter-spacing: 2px;
+}
+.logo > h2{
+    position: relative;
+    top: 7.5px;
+}
+.logo > h4{
+    position: relative;
+    top: 2px;
+}
+.whitetitle{
+    letter-spacing: 1px;
+}
+#menu{
+    display: inline;
+    word-spacing: 1.5rem; 
+}
+header a{
+    color: white;
+    text-decoration: none;
+    padding: 0.3em;
+    border-radius: 3px;
+}
+header a:hover{
+    background-color: #44317D;
+}
+span{
+    word-spacing: normal;
+}
+header{
+    background-color:#3A2A6B;
+    padding: 0.7em;
+    color: white;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+nav {
+    flex: 1;
+    text-align: right;
+ }
+.btn{
+    display: inline-block;
+    background-color: #7F5BEB;
+    color: white;
+    padding: 8px 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: none;
+}
+.btn:hover{
+    background-color: #684BBF;
+}
+.btn2{
+    display: inline-block;
+    /*background-color: #7F5BEB;*/
+    background-color: #fa9192;
+    color: white;
+    padding: 8px 30px;
+    margin: 20px 0;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.btn2:hover{
+    background-color: #F97779;
+}
+.container{
+    display: flex;
+    /*background-color: #B8A6ED;*/
+    background-color: #c4a6ed;
+    margin: 3.5em 9% 3.5em 9%;
+    padding: 5%;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .container{
+        flex-direction: column;
+        padding: 8%;
+        justify-content: center;
+    }
+    .container img{
+        max-width: 80%;
+        height: auto;
+        margin: 1em;
+    }
+    .text h4{
+        font-size: 1.1em;
+    }
+    .list{
+        overflow-x:auto;
+        width: auto;
+    }
+    .product{
+        max-width: 75%;
+        margin-right: 0.1em;
+    }
+    textarea{
+        max-width: 80%;
+    }
+}
+.imm{
+    float: right;
+    position: relative;
+    display: inline;
+    margin-top: 0;
+}
+.text{
+    color: white;
+    display: inline;
+    margin: 1em;
+}
+.name{
+    position: relative;
+    display: inline;
+    padding: 0;
+    font-size: 180%;
+    letter-spacing: 2px;
+}
+#aboutme{
+   background-color: #EAE5FA;
+    color:#271B46;
+    padding: 50px;
+}
+.skills{
+    list-style-position: inside;
+    margin: 30px 0 30px 0;
+}
+.me{
+    display: block;
+    margin: 0 0 20px 0;
+}
+#services{
+    padding: 50px;
+    color:#271B46;
+}
+.par{
+    margin: 20px;
+}
+.list{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+}
+.product{
+    border: solid #271B46;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 30px;
+    text-align: center;
+    width: 23em;
+    text-align: center;
+    color: #271B46;
+}
+
+.product > h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#projects{
+    background-color: #f5d7db;
+    padding: 0.7em;
+    color: #271B46;
+}
+footer{
+    background-color:#3A2A6B;
+    color: white;
+}
+.form{
+    background-color: white;
+    padding: 2em;
+    padding-left: 5em;
+    color: #271B46;
+}
+
+.form h4{
+    padding-bottom: 0.5em;
+}
+input{
+    margin-bottom: 0.5em;
+    height: 2em;
+}
+.foot{
+    padding: 2em 2em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.ftcont{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+}
+@media (max-width: 500px) {
+    .ftcont{
+        flex-direction: column;
+    }
+    .foot{
+        padding: 1.7em;
+    }
+}
+.item p, .item a, #social a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 0.5vw 1vw;
+    border-radius: 3px;
+}
+.item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 0.3em;
+}
+ion-icon{
+    font-size: 24px;
+}
+#social{
+    display: flex;
+}
+#cop{
+    padding: 0.5em 0 0.5em 0;
+    font-style: italic;
+    text-align: center;
+}
+footer a:hover{
+    color: #D9D9D9;
+}
+.work{
+    background-color: white;
+}
+.work img{
+    width: 100%;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 1em;
+    justify-content: center;
+}
+@media (max-width: 500px) {
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+    }
+}
+.text2{
+    padding: 1em;
+}
+#projects h2, #projects h3{
+    text-align: center;
+    margin: 1em;
+    color:#271B46;
+}

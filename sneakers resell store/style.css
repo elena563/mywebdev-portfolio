@@ -1,0 +1,231 @@
+body{
+    font-family: Verdana, "Geneva", Tahoma, sans-serif;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 0.2em;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .home{
+    background-image: url(immagini/nike.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 50em;
+  }
+
+  nav {
+    flex: 1;
+    text-align: right;
+    font-weight: 550;
+  }
+  .hmain{
+    text-align: center;
+    margin: 8em 0 8em 0;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  nav ul {
+    display: inline-block;
+    list-style-type: none;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+ .link {
+    color:black;
+    text-decoration: none;
+    padding: 0.7em;
+    border: solid transparent;
+  }
+  .link:hover ,.icon:hover{
+    border: solid black;
+  }
+  .menu {
+    width: 120px;
+    display: none;
+  }
+  .btn{
+    display: inline-block;
+    border: solid black;
+    color: black;
+    padding: 8px 30px;
+    margin-top: 0.5em;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 550;
+  }
+  .btn:hover{
+    background-color: black;
+    color: white;
+  }
+  .logo{
+    position: relative;
+    left: 2em;
+  }
+  .icon{
+    margin: 0.5em;
+    padding: 0.7em;
+    border: solid transparent;
+  }
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+  #ftcontainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+  footer p{
+    font-style: italic;
+    text-align: center;
+  }
+  .foot{
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+  }
+  #wlogo{
+    flex-grow: 1;
+    margin-left: 1em;
+    color: white;
+  }
+  .foot a{
+    color: white;
+    text-decoration: none;
+  }
+  .form{
+    width: 20%;
+  }
+  form input{
+    display: inline-block;
+    width: 60%;
+    margin-top: 0.5em;
+  }
+  textarea{
+    margin-top: 0.5em;
+    margin-right: 1em;
+  }
+  .negbtn{
+    display: inline-block;
+    border: solid white;
+    color: white;
+    background-color: black;
+    padding: 2px 5px;
+    margin-top: 0.5em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 550;
+    width: 30%;
+  }
+  .negbtn:hover{
+    background-color: white;
+    color: black;
+  }
+.black{
+  background-color: black;
+  color: white;
+}
+.inner{
+  padding: 5em 2em 5em 2em;
+}
+.white{
+  padding: 2em 5em 2em 5em;
+}
+.prodimg{
+  padding: 5em 1.5em 5em 1.5em;
+  background-color: #e5e6e8;
+  height: 5em;
+  text-align: center;
+}
+.product p{
+  text-align: center;
+}
+.product{
+  border: solid 0.08em transparent;
+  flex-shrink: 0;
+  width: 14em;
+}
+.product:hover{
+  border: solid 0.08em black;
+}
+  .container1{
+  display: flex;
+  gap: 1em;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  }
+  .container1::-webkit-scrollbar {
+    width: 0; /* Nascondi la barra di scorrimento su browser WebKit (Chrome, Safari, ecc.) */
+  }
+  .container1 {
+    scrollbar-width: none; /* Nascondi la barra di scorrimento su browser che supportano lo standard CSS Scrollbars Level 1 */
+  }
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* o la posizione desiderata */
+    transform: translateY(-50%);
+    cursor: pointer;
+    /* Aggiungi l'icona come sfondo o utilizza un'icona font o SVG */
+    /* background-image: url('path-to-your-arrow-icon.png'); */
+    /* font-family: 'Font Awesome'; content: '\f061'; */
+  }
+  .cont a{
+    color: black;
+    text-decoration: none;
+  }
+  .disc{
+    font-size: 0.9em;
+    text-decoration: line-through;
+  }
+  .offer{
+    font-weight: bold;
+  }
+  .btn_responsivemenu{display: none;float: right;padding:5px;cursor:pointer;margin:  0px 20px 0 0;color: #ffffff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);background:#333;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+
+	.icon-bar{display: block;width: 18px;height: 2px;margin:5px;background-color: #f5f5f5;-webkit-border-radius: 1px;-moz-border-radius: 1px;border-radius: 1px;-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);}
+
+	.show{display:block!important}
+  @media (max-width: 767px) {
+
+    /* Header */
+  
+    #site-title a {font-size:25px;margin-left:10px;}
+  
+    nav			{display:none;}
+  
+    nav ul li 	{float: none;}
+  
+  
+    .btn_responsivemenu{display:block;}
+  
+  
+  }
+  
+  /*streetwear*/
+  .sw{
+    background-image: url(streetwear/backdef.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 50em;
+  }
+  .store{
+    display: flex;
+  }
+  @media (max-width: 500px) {
+    .sw{
+      background-image: url(streetwear/backresp.jpg);
+    }
+  }

@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+ header{
+    background-color: #821d1d;
+    font-family: "Optima";
+    color:white;
+    margin: 0;
+ }
+ .logo{
+    position: absolute;
+    background-color: antiquewhite;
+ }
+ .lowheader{
+    background-image: url(immagini/hotel3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+ }
+ h1{
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    font-size: 5vw;
+ }
+ @media screen and (max-width: 500px){
+    .lowheader{
+        height: 30vh;
+        padding-top: 15%;
+        
+    }
+    h1{
+        font-size: 2rem;
+    }
+ }
+ 
+.navbar{
+    display: flex;
+    padding: 30px;
+    word-spacing: 1.5rem; 
+}
+span{
+    word-spacing: normal;
+}
+nav ul li{
+    display: inline-block;
+}
+nav{
+    text-align: center;
+    flex-grow: 1;
+   
+}
+nav a{
+    color:white;
+    text-decoration: none;
+}
+body{
+    background-color: antiquewhite;
+}
+#chisiamo{
+    color: #4E5051;
+    text-align: center;
+    margin: 3em 4em 1em 4em;
+    font-size: 0.8rem;
+}
+h2{
+    color: #8C5B26;
+    padding: 0.5em;
+    font-family: "Playfair Display";
+    font-size: 2rem;
+}
+#chisiamo p{
+    font-size: 1.5em;
+}
+.grid-container{
+    display: grid;
+    width: 100%;
+    grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+    gap: 1em;
+    padding: 2em;
+    box-sizing: border-box;
+}
+.grid-container img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.paes{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.pool{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.item6{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.item4{
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.relax{
+    grid-row-start: 3.5;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.borghi{
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.item7{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
