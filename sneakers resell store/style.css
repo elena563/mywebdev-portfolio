@@ -1,13 +1,27 @@
 body{
-    font-family: Verdana, "Geneva", Tahoma, sans-serif;
-    letter-spacing: -0.03em;
+    font-family: 'Cooper Hewitt', "Geneva", Tahoma, sans-serif;
     margin: 0;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: local('poppins'), url('Poppins-Bold.otf') format('truetype');
+	}
+@font-face {
+  font-family: 'Cooper Hewitt';
+	src: local('cooper-hewitt'), url('CooperHewitt-Book.otf') format('truetype');
+}
+h1, h2, h3, h4, h5, nav, button, .btn{
+  font-family: 'Poppins'
 }
   .navbar {
     display: flex;
     align-items: center;
-    padding: 0.2em;
     background-color: rgba(255, 255, 255, 0.5);
+  }
+  .navbar2{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255);
   }
   .home{
     background-image: url(immagini/nike.jpg);
@@ -20,7 +34,6 @@ body{
   nav {
     flex: 1;
     text-align: right;
-    font-weight: 550;
   }
   .hmain{
     text-align: center;
@@ -66,7 +79,7 @@ body{
   }
   .logo{
     position: relative;
-    left: 2em;
+    left: 1em;
   }
   .icon{
     margin: 0.5em;
@@ -81,23 +94,39 @@ footer{
 }
   #ftcontainer{
     display: flex;
-    justify-content: flex-end;
-    margin-top: 3em;
-    margin-bottom: 2em;
+    justify-content: space-between;
+    margin: 3em 1.5em 2em 1.5em;
+    gap: 1em;
   }
   footer p{
     font-style: italic;
     text-align: center;
+  }
+  #wlogo{
+    text-align: center;
+    flex-grow: 0.5;
   }
   .foot{
     width: 17%;
     display: flex;
     flex-direction: column;
   }
-  #wlogo{
-    flex-grow: 1;
-    margin-left: 1em;
-    color: white;
+  .social{
+    display: flex;
+    height: 32px;
+    gap: 0.5em;
+    margin-top: 1.67em;
+    margin-right: 1em;
+  }
+  iconify-icon{
+    padding: 2px;
+    border-radius: 50px;
+    background-color: white;
+    border: solid white;
+  }
+  iconify-icon:hover{
+    background-color: #C9CBCF;
+    border: solid #C9CBCF;
   }
   .foot a{
     color: white;
@@ -139,13 +168,24 @@ footer{
   padding: 5em 2em 5em 2em;
 }
 .white{
-  padding: 2em 5em 2em 5em;
+  padding: 2em;
+}
+
+.sep{
+  background-image: url(streetwear/backdef.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 500px;
 }
 .prodimg{
   padding: 5em 1.5em 5em 1.5em;
   background-color: #e5e6e8;
   height: 5em;
   text-align: center;
+}
+.tall{
+  padding: 1em 1.5em 9em 1.5em;
 }
 .product p{
   text-align: center;
@@ -213,19 +253,71 @@ footer{
   
   }
   
+  @media (max-width: 500px) {
+    #ftcontainer{
+      flex-direction: column;
+      padding: 0 2em;
+    }
+    .foot{
+      width: 100%;
+    }
+  }
+
   /*streetwear*/
-  .sw{
-    background-image: url(streetwear/backdef.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center top;
-    min-height: 50em;
+  .filters{
+    width: 20%;
+  }
+  .filters input{
+    margin-bottom: 0.5em;
+  }
+  details:last-child{
+    margin-bottom: 1em;
+  }
+  summary{
+    margin: 1em 0;
+  }
+  .fil{
+    border-bottom: 0.5px solid #C9CBCF
+  }
+  .filters h5{
+    display: inline;
+  }
+  .filters h5:hover{
+    cursor: pointer;
+  }
+  .snk{
+    border-top: 0.5px solid #C9CBCF;
+    padding: 1.5em;
+    text-align: center;
   }
   .store{
     display: flex;
+    gap: 2em;
+  }
+  .container2{
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    gap: 1em;
   }
   @media (max-width: 500px) {
     .sw{
       background-image: url(streetwear/backresp.jpg);
     }
+    .filters{
+      visibility: hidden;
+      position: absolute;
+    }
+    /*.container2 .product{
+      width: 10em;
+    }
+    .container2 .prodimg{
+      height: 3em;
+    }*/
+    .container2{
+      grid-template: repeat(8, 1fr) / repeat(2, 1fr);
+      text-align: center;
+      transform: scale(0.6);
+      transform-origin: top center;
+    }
   }
+  

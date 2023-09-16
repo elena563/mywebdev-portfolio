@@ -10,9 +10,9 @@
         <script src="/html/script.js" type="text/javascript"></script>
     </head>
     <body>
-        <header class="sw">
+        <header>
             <div class="container">
-                <div class="navbar">
+                <div class="navbar2">
                     <div class="logo">
                         <a href="index.html" id="site-title"><img src="immagini/logo.png" alt="SB00 Store" width="200em" class=""></a>
                     </div>
@@ -20,9 +20,8 @@
                     <nav>
                         <ul>
                             <li><a href="index.html" class="link">Home</a></li>
-                            <li><a href="#sneakers" class="link">Sneakers</a></li>
+                            <li><a href="sneakers.html" class="link">Sneakers</a></li>
                             <li><a href="streetwear.html" class="link">Streetwear</a></li>
-                            <li><a href="#accessories" class="link">Accessories</a></li>
                             <li><a href="#sale" class="link">On Sale</a></li>
                             <!--nuove pagine per catalogo
                             dovranno avere un filtro per marca e prezzo-->
@@ -32,29 +31,45 @@
                     <a href=""><img src="immagini/cart-black-icon.png" alt="cart" height="25em" class="icon"></a>
                     <!--<img src="https://i.ibb.co/6XbqwjD/menu.png" alt="menu" class="menu" onclick="menutoggle()">-->
                 </div>
-                <div class="hmain">
+                <div class="snk">
                     <h1>Streetwear</h1>
                 </div>
             </div>
         </header>
         <div class="white store">
             <div class="filters">
+                <h3>Filter</h3>
                 <div class="fil">
-                    <h5>Gender</h5>
-                    <input type="checkbox">Man <br>
-                    <input type="checkbox">Woman <br>
-                    <input type="checkbox">Unisex<br>
+                    <details>
+                        <summary><h5>Gender</h5></summary>
+                        <input type="checkbox">Man <br>
+                        <input type="checkbox">Woman <br>
+                        <input type="checkbox">Unisex<br>
+                    </details>
                 </div>
                 <div class="fil">
-                    <h5>Category</h5>
-                    <input type="checkbox">Tops<br>
-                    <input type="checkbox">Bottoms<br>
+                    <details>
+                        <summary><h5>Brand</h5></summary>
+                        <input type="checkbox">Nike <br>
+                        <input type="checkbox">Adidas <br>
+                        <input type="checkbox">Other<br>
+                    </details>
                 </div>
                 <div class="fil">
-                    <h5>Price</h5>
-                    <input type="checkbox">Less than $50<br>
-                    <input type="checkbox">$50-200<br>
-                    <input type="checkbox">More than $200<br>
+                    <details>
+                        <summary><h5>Category</h5></summary>
+                        <input type="checkbox">Tops <br>
+                        <input type="checkbox">Bottoms <br>
+                        <input type="checkbox">Accessories<br>
+                    </details>
+                </div>
+                <div class="fil">
+                    <details>
+                        <summary><h5>Price</h5></summary>
+                        <input type="checkbox">Less than $50 <br>
+                        <input type="checkbox">$50-200 <br>
+                        <input type="checkbox">More than $200<br>
+                    </details>
                 </div>
             </div>
             <div class="cont container2">
@@ -64,6 +79,13 @@
                     </div>
                     <p>Nike baseball cap</p>
                     <p>$25.00</p>
+                </div></a>
+                <a href="#"><div class="product">
+                    <div class="prodimg tall">
+                        <img src="streetwear/jacket.png" alt="jacket" width="150em" > <br>
+                    </div>
+                    <p>Nike White Jacket</p>
+                    <p>$75.00</p>
                 </div></a>
             </div>
         </div>
@@ -83,11 +105,6 @@
                     <a href="" class="ftlink">FAQ's</a>
                     <a href="" class="ftlink">Support</a>
                 </div>
-                <div class="foot">
-                    <h5>Contact us</h5>
-                    <a href="#" class="ftlink">@SB00store</a>
-                    <a href="#" class="ftlink">@sblackofficial</a>
-                </div>
                 <div class="foot form">
                     <h5>Contacting Form</h5>
                     <form action="#">
@@ -97,8 +114,14 @@
                         <button class="negbtn">Invia</button>
                     </form>
                 </div>
+                <div class="social">
+                    <iconify-icon icon="mdi:instagram" style="color: black;" width="24" height="24"></iconify-icon>
+                    <iconify-icon icon="ri:facebook-fill" style="color: black;" width="24" height="24"></iconify-icon>
+                    <iconify-icon icon="ic:baseline-tiktok" style="color: black;" width="24" height="24"></iconify-icon>
+                </div>
             </div>
             <p>© SB00.com All Rights Reserved</p>
         </footer>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     </body>
 </html>
