@@ -4,8 +4,12 @@
     box-sizing: border-box;
   }
 body{
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+@font-face {
+	font-family: 'Roboto';
+	src: local('roboto'), url('Roboto-Regular.ttf') format('truetype');
+	}
 @font-face {
 	font-family: 'Coolvetica';
 	src: local('Coolvetica'), url('Coolvetica.ttf') format('truetype');
@@ -22,24 +26,9 @@ h3{
 h4{
     font-size: 130%;
 }
-.logo{
-    display: flex;
-    letter-spacing: 2px;
-}
-.logo > h2{
-    position: relative;
-    top: 7.5px;
-}
-.logo > h4{
-    position: relative;
-    top: 2px;
-}
-.whitetitle{
-    letter-spacing: 1px;
-}
-#menu{
-    display: inline;
-    word-spacing: 1.5rem; 
+header{
+    background-color:#3A2A6B;
+    color: white;
 }
 header a{
     color: white;
@@ -50,41 +39,50 @@ header a{
 header a:hover{
     background-color: #44317D;
 }
-span{
-    word-spacing: normal;
-}
-header{
-    background-color:#3A2A6B;
-    padding: 0.7em;
-    color: white;
-}
 .navbar {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 2em;
   }
 nav {
     flex: 1;
     text-align: right;
  }
+.logo{
+    display: flex;
+    letter-spacing: 2px;
+}
+/*logo in navbar*/
+.logo > h2{
+    position: relative;
+    top: 7.5px;
+} 
+#menu{
+    display: inline;
+    word-spacing: 1.5rem; 
+}
+span{
+    word-spacing: normal;
+}
+/*bottoni*/
 .btn{
     display: inline-block;
     background-color: #7F5BEB;
     color: white;
-    padding: 8px 30px;
+    padding: 10px 30px;
     margin-top: 20px;
     border-radius: 30px;
     border: none;
+    font-size: 1em;
 }
 .btn:hover{
     background-color: #684BBF;
 }
 .btn2{
     display: inline-block;
-    /*background-color: #7F5BEB;*/
     background-color: #fa9192;
     color: white;
-    padding: 8px 30px;
+    padding: 10px 30px;
     margin: 20px 0;
     border-radius: 30px;
     text-decoration: none;
@@ -102,7 +100,91 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
+.text{
+    color: white;
+    display: inline;
+    margin: 1em;
+}
+.name{
+    position: relative;
+    display: inline;
+    padding: 0;
+    font-size: 180%;
+    letter-spacing: 2px;
+}
+/*immagine in about me*/
+.imm{
+    float: right;
+    position: relative;
+    display: inline;
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+#aboutme{
+   background-color: #EAE5FA;
+    color:#271B46;
+    padding: 3em;
+}
+.me{
+    display: block;
+    margin: 0 0 20px 0;
+}
+.skills{
+    list-style-position: inside;
+    margin-top: 1em;
+}
 
+#services{
+    padding: 3em;
+    color:#271B46;
+    max-width: 100%;
+}
+.par{
+    margin: 1em 0;
+}
+.par a{
+    text-decoration: none;
+}
+.list{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    overflow-x:auto;
+}
+.product{
+    border: solid #271B46;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 30px;
+    text-align: center;
+    width: 23em;
+    text-align: center;
+    color: #271B46;
+}
+.product > h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#projects{
+    background-color: #f5d7db;
+    padding: 0.7em 0.7em 2em 0.7em;
+    color: #271B46;
+}
+#projects ul{
+    list-style-type: none;
+}
+.work{
+    background-color: white;
+}
+.work img{
+    width: 100%;
+}
+#projects h2, #projects h3{
+    text-align: center;
+    margin: 1em;
+    color:#271B46;
+}
 @media (max-width: 500px) {
     .container{
         flex-direction: column;
@@ -117,84 +199,20 @@ nav {
     .text h4{
         font-size: 1.1em;
     }
-    .list{
-        overflow-x:auto;
-        width: auto;
-    }
     .product{
-        max-width: 75%;
+        max-width: 75vw;
         margin-right: 0.1em;
     }
-    textarea{
-        max-width: 80%;
-    }
-}
-.imm{
-    float: right;
-    position: relative;
-    display: inline;
-    margin-top: 0;
-}
-.text{
-    color: white;
-    display: inline;
-    margin: 1em;
-}
-.name{
-    position: relative;
-    display: inline;
-    padding: 0;
-    font-size: 180%;
-    letter-spacing: 2px;
-}
-#aboutme{
-   background-color: #EAE5FA;
-    color:#271B46;
-    padding: 50px;
-}
-.skills{
-    list-style-position: inside;
-    margin: 30px 0 30px 0;
-}
-.me{
-    display: block;
-    margin: 0 0 20px 0;
-}
-#services{
-    padding: 50px;
-    color:#271B46;
-}
-.par{
-    margin: 20px;
-}
-.list{
-    display: flex;
-    justify-content: flex-start;
-    list-style-type: none;
-}
-.product{
-    border: solid #271B46;
-    padding: 1em;
-    margin: 0.5em;
-    border-radius: 30px;
-    text-align: center;
-    width: 23em;
-    text-align: center;
-    color: #271B46;
-}
-
-.product > h3{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-#projects{
-    background-color: #f5d7db;
-    padding: 0.7em;
-    color: #271B46;
 }
 footer{
     background-color:#3A2A6B;
     color: white;
+}
+/*logo in footer*/
+.logo > h4{
+    position: relative;
+    top: 2px;
+    letter-spacing: 1px;
 }
 .form{
     background-color: white;
@@ -228,6 +246,9 @@ input{
     .foot{
         padding: 1.7em;
     }
+    textarea{
+        max-width: 80%;
+    }
 }
 .item p, .item a, #social a{
     display: inline-block;
@@ -245,6 +266,9 @@ input{
 ion-icon{
     font-size: 24px;
 }
+iconify-icon:hover{
+    background-color: #44317D;
+}
 #social{
     display: flex;
 }
@@ -252,15 +276,6 @@ ion-icon{
     padding: 0.5em 0 0.5em 0;
     font-style: italic;
     text-align: center;
-}
-footer a:hover{
-    color: #D9D9D9;
-}
-.work{
-    background-color: white;
-}
-.work img{
-    width: 100%;
 }
 .grid-container{
     display: grid;
@@ -277,9 +292,4 @@ footer a:hover{
 }
 .text2{
     padding: 1em;
-}
-#projects h2, #projects h3{
-    text-align: center;
-    margin: 1em;
-    color:#271B46;
 }
