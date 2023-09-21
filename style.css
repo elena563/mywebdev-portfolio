@@ -36,7 +36,7 @@ header a{
     padding: 0.3em;
     border-radius: 3px;
 }
-header a:hover{
+header :is(a, ul span):hover{
     background-color: #44317D;
 }
 .navbar {
@@ -61,8 +61,12 @@ nav {
     display: inline;
     word-spacing: 1.5rem; 
 }
-span{
+#ham{
+    display:none;
+}
+ul span{
     word-spacing: normal;
+    padding: 0.3em;
 }
 /*bottoni*/
 .btn{
@@ -185,7 +189,7 @@ span{
     margin: 1em;
     color:#271B46;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .container{
         flex-direction: column;
         padding: 8%;
@@ -203,6 +207,72 @@ span{
         max-width: 75vw;
         margin-right: 0.1em;
     }
+    #ham{
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 2.5em;
+        align-self: center;
+        right: 2em;
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+      }
+    #menu{
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        
+    }
+    .mymenu{
+        display: block !important;
+    }
+    #menucont{
+        display: none;
+        min-width: 10em;
+        width: 45%;
+        position: absolute;
+        top: 114px;
+        right: 0;
+        background-color:#3A2A6B;
+        padding: 2em;
+        z-index: 1;
+    }
+    
+}
+@media (max-width: 300px) {
+    .container{
+        margin: 3.5em 7%;
+        padding: 6%;
+    }
+    .text h4{
+        font-size: 1em;
+    }
+    .text h1{
+        font-size: 1.7em;
+    }
+    .navbar{
+        padding: 2em 1.5em;
+    }
+    #aboutme{
+        padding: 2em;
+    }
+    .imm{
+        height:240px;
+        width: 240px;
+        float: none;
+        margin-left: -0.5em;
+        overflow: hidden;
+    }
 }
 footer{
     background-color:#3A2A6B;
@@ -216,8 +286,7 @@ footer{
 }
 .form{
     background-color: white;
-    padding: 2em;
-    padding-left: 5em;
+    padding: 3em;
     color: #271B46;
 }
 
@@ -239,7 +308,7 @@ input{
     justify-content: space-between;
     gap: 1.5em;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .ftcont{
         flex-direction: column;
     }
@@ -247,7 +316,10 @@ input{
         padding: 1.7em;
     }
     textarea{
-        max-width: 80%;
+        max-width: 90%;
+    }
+    .form{
+        padding: 2em;
     }
 }
 .item p, .item a, #social a{
@@ -283,7 +355,7 @@ iconify-icon:hover{
     gap: 1em;
     justify-content: center;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .grid-container{
         display: flex;
         flex-direction: column;

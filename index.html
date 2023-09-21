@@ -18,13 +18,22 @@
                 </div>
                 <nav>
                     <!--barra di navigazione-->
-                    <ul id="menu">
-                        <a href="zen-elena-portfolio.html">Home</a>
-                        <span style="word-spacing: normal;"><a href="#aboutme">About me</a></span>
-                        <a href="#services">Services</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#contacts">Contacts</a>
-                    </ul>
+                    <div id="menucont">
+                        <ul id="menu">
+                            <a href="zen-elena-portfolio.html">Home</a>
+                            <span style="word-spacing: normal;"><a href="#aboutme">About me</a></span>
+                            <a href="#services">Services</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#contacts">Contacts</a>
+                        </ul>
+                    </div>
+                    <!--<input type="checkbox">-->
+                    
+                    <div id="ham" onclick="show()">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -47,7 +56,7 @@
             <h2 class="me">Hi there! This is Elena</h2>
             <p>I'm a junior <strong>front-end developer</strong> and I can help you digitalize your activity in a simple and creative way!</p>
             <p>Born in 2003 in Italy, I am now studying <strong>Statistics and Information Management</strong> in Milan <br>and in the meanwhile I am taking training courses on the internet.</p>
-            <a target="_blank" class="btn2" href="Elena_Zen_Resume.pdf">Download my CV</a>
+            <a target="_blank" class="btn2" href="Elena_Zen_Resume_2.pdf">Download my CV</a>
             
             <div class="skills">
                 <h3>My Skills</h3>
@@ -162,9 +171,9 @@
                 <div class="form">
                     <h4>You will be contacted soon!</h4>
                     <form action="#">
-                        <input type="text" placeholder="Your Name">
-                        <input type="text" placeholder="Your Email"> <br>
-                        <textarea rows="10" cols="50" placeholder="Your Message"> </textarea> <br>
+                        <input type="text" placeholder="Your Name" name="name" required> <br>
+                        <input type="text" placeholder="Your Email" name="email" required> <br>
+                        <textarea rows="10" cols="50" placeholder="Your Message" name="message" required> </textarea> <br>
                         <button onclick="submit()" class="btn">Submit</button>
                     </form>
                 </div>
@@ -215,8 +224,10 @@
             </div>
             <p id="cop">© Elena Zen All Rights Reserved</p>
         </footer>
+        
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>

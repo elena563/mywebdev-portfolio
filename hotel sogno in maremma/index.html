@@ -5,13 +5,16 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="hotel, tuscany, italy, maremma, nature, landscape, pool, comfort">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="">
+        <link rel="icon" type="image/png" href="immagini/favicon2.png">
         <link rel= "stylesheet" href= "style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div class="navbar">
-                <div class="logo"><img src="immagini/logobrown.png" alt="" width="200em"></div>
+                <div class="logo">
+                    <h1>Hotel <span style="font-style: normal;">★★★★</span> <br>Sogno in Maremma</h1>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#chisiamo" class="link"><span>Chi siamo</span></a></li>
@@ -22,35 +25,53 @@
                 </nav>
             </div>
             <div class="lowheader">
-                <h1>NATURA e RELAX</h1>
+                <h2>NATURA e RELAX</h2>
             </div>
         </header>
         <main>
             <div id="chisiamo">
-                <h2>Esplora la Magia</h2>
+                <h3>Esplora l'Emozione della Vacanza</h3>
                 <p>Unisciti a noi per trascorrere un soggiorno unico ed 
                     indimenticabile in un luogo che incarna la perfetta fusione tra modernità e tradizione. Le nostre porte sono aperte 
-                    per farti vivere un'esperienza che ti lascerà senza parole. <br>    
-                    Immerso nella magica Maremma, il nostro hotel offre un'oasi di tranquillità e bellezza. La recente ristrutturazione 
-                    ha arricchito ogni angolo con tocchi contemporanei, pur preservando con amore il calore e l'essenza della tradizione.
-                    Ti sentirai in dolce armonia con il paesaggi mozzafiato, mentre il nostro staff ti coccolerà con i migliori comfort e 
-                    servizi di qualità. E se desiderassi esplorare, ci troviamo a soli pochi chilometri da 
-                    Firenze e da altri borghi incantevoli, pronti ad accoglierti con le loro storie e le loro tradizioni. <br></p>
+                    per farti vivere un'esperienza che ti lascerà senza parole.</p> <br>   
+                    <p>Immerso nella magica <strong>Maremma</strong>, il nostro hotel offre un'oasi di tranquillità e bellezza. La recente
+                     ristrutturazione ha arricchito ogni angolo con tocchi contemporanei, pur preservando con amore il calore e l'essenza 
+                     della tradizione. </p> <br>
+                    <p>Ti sentirai in dolce armonia con i <strong>paesaggi</strong> mozzafiato, mentre il nostro staff ti 
+                     coccolerà con i migliori <strong>comfort</strong> e servizi di qualità. E se desiderassi esplorare, ci troviamo a soli pochi chilometri  
+                    da Firenze e da altri borghi incantevoli, pronti ad accoglierti con le loro storie e le loro tradizioni. <br></p>
+                    <a class="button" href="">Scopri l'hotel</a>
             </div>
             <div class="grid-container">
-                <img src="immagini/nature2.jpg" alt="" class="paes">
-                <img src="immagini/poolpart3.jpg" alt=""  class="pool">
-                <img src="immagini/area relax.jpg" alt=""  class="relax">
-                <img src="immagini/camera con vasca2.jpg" alt=""  class="item4">
-                <img src="immagini/borghi3.jpg" alt=""  class="borghi">
-                <img src="immagini/food.jpg" alt=""  class="item6">
-                <img src="immagini/pool8.jpg" alt=""  class="item7">
+                <img src="immagini/nature2.jpg" alt="colline" class="paes">
+                <img src="immagini/poolpart3.jpg" alt="piscina"  class="pool">
+                <img src="immagini/camera con vasca2.jpg" alt="camera"  class="item4">
+                <img src="immagini/food.jpg" alt="cibo"  class="item6">
             </div>
             <div class="formprenotazione">
-                <form action="">
-
+                <div id="esisto">
+                    <h3>Prenota adesso</h3>
+                    <p>Vedi subito le migliori offerte sul periodo che preferisci</p>
+                </div>
+                <form>
+                    <fieldset class="two">
+                        <label for="in">Check-in <input type="date" id="in"></label>
+                        <label for="out">Check-out <input type="date" id="out"></label>
+                    </fieldset>
+                    <fieldset class="three">
+                            <label for="rooms">Camere <input type="number" id="rooms"></label>
+                            <label for="adults">Adulti <input type="number" id="adults"></label>
+                            <label for="kids">Bambini <input type="number" id="kids"></label>
+                    </fieldset>
+                    <a class="button" href="">Vedi disponibilità</a>
                 </form>
+                
             </div>
         </main>
+        <footer>
+            <div>
+                <p class="f-logo">HSM</p>
+            </div>
+        </footer>
     </body>
 </html>
