@@ -14,12 +14,17 @@
  .logo{
     position: absolute;
     background-color: #EDDBC0;
+    max-width: 40%;
+ }
+ .logo a{
+    text-decoration: none;
  }
  .lowheader{
-    background-image: url(immagini/hotel3.jpg);
+    background-image: url(immagini/hotel6_11zon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
+    width: 100%;
+    height: 80vh;
  }
  h1{
     color: #8C5B26;
@@ -69,7 +74,7 @@ h3{
     font-family: "Playfair Display";
     font-size: 2rem;
 }
-p{
+main p{
     font-size: 1.2em;
     color: #554445;
 }
@@ -78,7 +83,7 @@ p{
 }
 .button{
     display: block;
-    width: 13%;
+    width: max(160px, 13%);
     margin: 0 auto;
     background-color: #8C5B26;
     padding: 16px 32px;
@@ -96,12 +101,10 @@ p{
     width: 100%;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     gap: 1em;
-    padding: 2em;
+    padding: 1em;
     box-sizing: border-box;
-    background-color: #821d1d;
 }
 .grid-container img{
-    border-radius: 10px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -176,6 +179,7 @@ label{
     font-weight: bold;
     display: block;
     margin: 0.5em 0;
+    height: unset;
 }
 form .button{
     width: 45%;
@@ -191,14 +195,57 @@ footer{
 }
 @media screen and (max-width: 500px){
     .lowheader{
-        height: 30vh;
-        padding-top: 15%;
-        
+        padding-top: 5%;
+        background-position: center top;
+        background-size: 200%;
+        height: 40vh
     }
     h1{
-        font-size: 2rem;
+        font-size: 1.2em;
+        margin: 0.8em;
+    }
+    h2{
+        font-size: 3rem;
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
     grid-container{
         gap: 0.5em;
     }
+    .formprenotazione{
+        flex-direction: column;
+        gap: 1em;
+        margin: 1em 2em 2em 2em;
+    }
+    .grid-container{
+        display: flex;
+        overflow-x: scroll;
+        align-items: center;
+        height: 90vh;
+    }
+}                          
+#rooms{
+    margin: 6em 3em;
+    display: flex;
+    justify-content: space-around;
+    height: 14em;
+}
+.room{
+    background-color: rgb(255, 255, 255, 0.5);
+    position: relative;
+    top: 9em;
+    z-index: 3;
+    padding: 1em 1em;
+    text-align: center;
+    color:#8C5B26;
+}
+.image{
+    object-fit: cover;
+    width: 10em;
+    height: 14em;
+}
+summary::marker{ display:none; } 
+summary{ 
+    list-style: none; 
+    height: 14em;
 }

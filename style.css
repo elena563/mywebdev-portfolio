@@ -71,27 +71,25 @@ ul span{
 /*bottoni*/
 .btn{
     display: inline-block;
-    background-color: #7F5BEB;
     color: white;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 30px;
     border: none;
     font-size: 1em;
-}
-.btn:hover{
-    background-color: #684BBF;
-}
-.btn2{
-    display: inline-block;
-    background-color: #fa9192;
-    color: white;
-    padding: 10px 30px;
-    margin: 20px 0;
-    border-radius: 30px;
     text-decoration: none;
 }
-.btn2:hover{
+.violet{
+    background-color: #7F5BEB;
+}
+.violet:hover{
+    background-color: #684BBF;
+}
+.orange{
+    background-color: #fa9192;
+    margin-bottom: 20px;    
+}
+.orange:hover{
     background-color: #F97779;
 }
 .container{
