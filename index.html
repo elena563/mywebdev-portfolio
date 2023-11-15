@@ -52,18 +52,19 @@
         </main>
         <!--chi sono e cosa so fare-->
         <div id="aboutme">
-            <img class="imm" src="immagini/icons2.png" alt="languages and softwares" height="300em">
-            <h2 class="me">Hi there! This is Elena</h2>
-            <p>I'm a junior <strong>front-end developer</strong> and I can help you digitalize your activity in a simple and creative way!</p>
-            <p>Born in 2003 in Italy, I am now studying <strong>Statistics and Information Management</strong> in Milan <br>and in the meanwhile I am taking training courses on the internet.</p>
+            <img src="immagini/icons2.png" alt="languages and softwares">
+            <div><h2>Hi there! This is Elena</h2>
+            <div class="about-text"><p>I'm a junior <strong>front-end developer</strong> and I can help you digitalize your activity in a simple and creative way!</p>
+            <p>Born in 2003 in Italy, I am now studying <strong>Statistics and Information Management</strong> in Milan <br>and in the meanwhile I am taking training courses on the internet.</p></div>
             <a target="_blank" class="btn orange" href="Elena_Zen_Resume_2.pdf">Download my CV</a>
             
             <div class="skills">
                 <h3>My Skills</h3>
-                <p>These are the programming languages and computer softwares I can handle:</p>
+                <div class="about-text"><p>These are the programming languages and computer softwares I can handle:</p>
                 <ul>
                     <li>HTML and CSS</li>
                     <li>Javascript</li>
+                    <li>CSS framework Bootstrap</li>
                     <li>Python and its libraries: Pandas and Matplotlib</li>
                     <li>SAS basics</li>
                     <li>Office Package (Excel, Word, Powerpoint)</li>
@@ -71,8 +72,8 @@
                     <li>Wordpress</li>
                     <li>SQL e NoSQL</li>
                     <li>R and RStudio</li>-->
-                </ul>
-            </div>
+                </ul></div>
+            </div></div>
         </div>
         <!--cosa offro-->
         <div id="services">
@@ -125,7 +126,7 @@
                             </div>
                         </div>
                         <div class="work">
-                            <img src="hotel sogno in maremma/immagini/shot.png" alt="">
+                            <img src="immagini/shot-hotel.png" alt="">
                             <div class="text2">
                                 <h4>Hotel Sogno in Maremma</h4>
                                 <p>Website for a 4 stars hotel in Tuscanian Maremma, Italy</p>
@@ -168,14 +169,24 @@
         <!--contatti in footer-->
         <footer id="contacts">
             <div>
-                <div class="form">
-                    <h4>You will be contacted soon!</h4>
-                    <form action="#">
-                        <input type="text" placeholder="Your Name" name="name" required> <br>
-                        <input type="text" placeholder="Your Email" name="email" required> <br>
-                        <textarea rows="10" cols="50" placeholder="Your Message" name="message" required> </textarea> <br>
-                        <button onclick="submit()" class="btn violet">Submit</button>
-                    </form>
+                <div class="formcont">
+                    <div class="form">
+                        
+                        <form action="#">
+                            <label for="name">Name</label> <br><input type="text" name="name" id="name" required> <br>
+                            <label for="email">Email</label> <br><input type="text" name="email" id="email" required>  <br>
+                            <label for="message">Your Message</label> <br><textarea rows="10" cols="50" name="message" id="message" required> </textarea> <br>
+                            <button onclick="submit()" class="btn violet">Submit</button>
+                        </form>
+                    </div>
+                    <div class="form">
+                        <div class="side">
+                            <h2>Get in touch</h2>
+                            <p>Unlock the doors to digital possibilities. Take the first step by connecting 
+                                with me through the form to discuss how we can bring your vision to life and 
+                                leverage data for your success. Your digital journey starts here</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="foot">
                     

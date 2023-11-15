@@ -5,55 +5,156 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="hotel, tuscany, italy, maremma, nature, landscape, pool, comfort">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="immagini/favicon2.png">
+        <link rel="icon" type="image/png" href="immagini/favicon3.png">
         <link rel= "stylesheet" href= "style.css">
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        
     </head>
     <body>
         <header>
             <div class="navbar">
-                <div class="logo">
+                <div class="logo rooms-section">
                     <a href="index.html"><h1>Hotel <span style="font-style: normal;">★★★★</span> <br>Sogno in Maremma</h1></a>
                 </div>
                 <nav>
-                    <ul>
-                        <li><a href="index.html" class="link"><span>Chi siamo</span></a></li>
-                        <li><a href="" class="link"><span>Le nostre camere</span></a></li>
-                        <li><a href="" class="link"><span>I servizi</span></a></li>
-                        <li><a href="" class="link"><span>Prenota ora</span></a></li>
-                    </ul>
+                    <div id="menucont">
+                        <ul>
+                            <li><a href="#chisiamo" class="link"><span>Chi siamo</span></a></li>
+                            <li><a href="rooms.html" class="link"><span>Le nostre camere</span></a></li>
+                            <li><a href="" class="link"><span>I servizi</span></a></li>
+                            <li><a href="" class="link"><span>Prenota ora</span></a></li>
+                        </ul>
+                    </div>
+                    <div id="ham" onclick="show()">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
                 </nav>
             </div>
         </header>
-        <main>
-            <div id="rooms">
-                <details>   <!--da continuare con js-->
-                    <summary><h4 class="room">Camera  <br> Economy</h4><img class="image" src="immagini/camera economy.jpg" alt="" height="100%" width="100%"></summary>
-                    <img src="immagini/camera economy.jpg" alt="" height="200em">
-                    <img src="immagini/bagno economy.jpg" alt="" height="200em">
-                </details>
-                <details>
-                    <summary><h4 class="room">Camera  <br> Comfort</h4><img class="image" src="immagini/camera comfort.jpg" alt="" height="100%" width="100%"></summary>
-                    <img src="immagini/camera comfort.jpg" alt="" height="200em">
-                    <img src="immagini/bagno comfort.jpg" alt="" height="200em">
-                </details>
-                <details>
-                    <summary><h4 class="room">Suite  <br> Deluxe</h4><img class="image" src="immagini/suite deluxe.jpg" alt="" height="100%" width="100%"></summary>
-                    <img src="immagini/suite deluxe.jpg" alt="" height="200em">
-                    <img src="immagini/bagno deluxe.jpg" alt="" height="200em">
-                </details>
-                <details>
-                    <summary><h4 class="room">Suite  <br> con Vasca <br> Idromassaggio</h4><img class="image" src="immagini/camera con vasca.jpg" alt="" height="100%" width="100%"></summary>
-                    <img src="immagini/camera con vasca.jpg" alt="" height="200em">
-                    <img src="immagini/camera con vasca2.jpg" alt="" height="200em">
-                </details>
+        <div id="rooms">
+            <div class="slot"> <!--slot camere che si aprono con js-->
+                <div class="room-option economy ">   
+                    <h4 class="room-type">Camera Economy</h4></div>
+                <div class="room-option comfort"> 
+                    <h4 class="room-type">Camera Comfort</h4>
+                </div>
             </div>
-        </main>
+            <div class="room_gallery">
+                <div class="flex-desc">
+                    <div class="amenities">
+                        <h5>Camera Economy</h5>
+                        <p>25m<sup>2</sup> doppia | 35m<sup>2</sup> quadrupla <br></p>
+                    </div>
+                    <p class="room-desc">La camera Economy offre un'accogliente soluzione per chi 
+                    cerca comfort a un prezzo accessibile. Semplice ed elegante, 
+                    questa camera è ideale per chi desidera un soggiorno piacevole senza eccessivi 
+                    fronzoli.</p>
+                </div>
+                <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                    <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                    <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                    <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                    <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br></span>
+                    <span class="price">da <span class="num">59€</span>/notte</span>
+                    <a class="button small" href="">Prenota</a>
+                </p>
+                <img src="immagini/camera economy2.jpg" alt="" height="200em">
+                <img src="immagini/bagno economy.jpg" alt="" height="200em">
+                <img src="immagini/camera letti singoli.jpg" alt="" height="200em">
+            </div>
+            <div class="room_gallery">
+                <div class="flex-desc">
+                    <div class="amenities">
+                        <h5>Camera Comfort</h5>
+                        <p>30m<sup>2</sup> doppia | 40m<sup>2</sup> quadrupla <br></p> 
+                    </div>
+                    <div class="room-desc">
+                    <p>La camera Comfort è progettata per offrire un'esperienza 
+                    di soggiorno più spaziosa e raffinata. Con arredi confortevoli e dettagli curati, 
+                    questa camera è pensata per chi desidera un tocco in più di lusso senza rinunciare 
+                    alla praticità.</p></div>
+                </div>
+                <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                    <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                    <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                    <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                    <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br></span>
+                    <span class="price">da <span class="num">59€</span>/notte</span>
+                    <a class="button small" href="">Prenota</a>
+                </p>
+                <img src="immagini/camera comfort1.jpg" alt="" height="200em">
+                <img src="immagini/bagno comfort.jpg" alt="" height="200em">
+                <img src="immagini/letti singoli.jpg" alt="" height="200em">
+            </div>
+            <div class="slot">
+                <div class="room-option deluxe"> 
+                    <h4 class="room-type">Suite Deluxe</h4>
+                </div>
+                <div class="room-option vasca"> 
+                    <h4 class="room-type">Suite con Vasca Idromassaggio</h4>
+                </div>
+            </div>
+            <div class="room_gallery">
+                <div class="flex-desc">
+                    <div class="amenities">
+                        <h5>Suite Deluxe</h5>
+                        <p>45m<sup>2</sup> doppia | 55m<sup>2</sup> quadrupla <br></p> 
+                    </div>
+                    <div class="room-desc">
+                        <p>La Suite Deluxe rappresenta l'eccellenza del nostro hotel.
+                        Questa spaziosa suite è arredata con gusto, offrendo un ambiente lussuoso e 
+                        raffinato. Con una zona living separata e servizi esclusivi, la Suite Deluxe è 
+                        pensata per coloro che cercano un'esperienza di soggiorno straordinaria. Goditi il
+                        massimo comfort e lasciati coccolare nei dettagli di questa suite di lusso.</p>
+                    </div>
+                </div>
+                <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                    <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                    <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                    <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                    <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br>
+                    <i class="fa-solid fa-couch" style="color: #554445;"></i> Area soggiorno <br></span>
+                    <span class="price">da <span class="num">59€</span>/notte</span>
+                    <a class="button small" href="">Prenota</a>
+                </p>
+                 <img src="immagini/suite deluxe.jpg" alt="" height="200em">
+               <img src="immagini/bagno deluxe.jpg" alt="" height="200em">
+           </div>
+           <div class="room_gallery">
+            <div class="flex-desc">
+                <div class="amenities">
+                    <h5>Suite con Vasca Idromassaggio</h5>
+                    <p>35m<sup>2</sup> doppia | 45m<sup>2</sup> quadrupla <br></p>
+                </div>
+            <div class="room-desc"><p>La Suite con Vasca Idromassaggio offre un'esperienza di 
+            relax senza pari. Oltre agli arredi eleganti e ai comfort di una suite di alto 
+            livello, questa suite dispone di una vasca idromassaggio privata. Rilassati e 
+            lascia che la dolce intimità delle bolle ti porti via lo stress, creando ricordi 
+            indimenticabili della tua permanenza nella suggestiva Maremma.</p></div>
+            </div>
+            <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br>
+                <i class="fa-solid fa-hot-tub-person" style="color: #554445;"></i> Vasca idromassaggio privata <br></span>
+                <span class="price">da <span class="num">59€</span>/notte</span>
+                <a class="button small" href="">Prenota</a>
+            </p>
+            <img src="immagini/camera con vasca2.jpg" alt="" height="200em">
+            <img src="immagini/bagno suite vasca.jpg" alt="" height="200em">
+        </div>
+        </div>
     </body>
     <footer>
         <div>
             <p class="f-logo">HSM</p>
         </div>
     </footer>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/cc3bfee917.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,26 +1,14 @@
-//info form
-function submit() {
-    const user = document.getElementsByTagName("input").value;
-    const uname = user[0];
-    const umail = user[1];
-    const umessage = document.querySelector("textarea").value;
-    const form = {
-        name: uname,
-        mail: umail,
-        message: umessage
-    }
-}
-//responsive dropdown header (<=600px vw)
 function show() {
     const menu = document.getElementById("menucont");
-    const isMobile = window.matchMedia("(max-width: 600px)").matches;
+    const isMobile = window.matchMedia("(max-width: 1100px)").matches;
 
     if (isMobile) {
         // Se la media query è attiva, mostra/nascondi il menu
-        menu.classList.toggle("open");
+        menu.classList.toggle("openmenu");
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
     const roomOptions = document.querySelectorAll('.room-option');
     const roomGalleries = document.querySelectorAll('.room_gallery');
 
@@ -49,4 +37,35 @@ function show() {
             });
         });
     });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

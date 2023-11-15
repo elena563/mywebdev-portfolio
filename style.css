@@ -114,28 +114,25 @@ ul span{
     font-size: 180%;
     letter-spacing: 2px;
 }
-/*immagine in about me*/
-.imm{
-    float: right;
-    position: relative;
-    display: inline;
-    margin-top: 0;
-    margin-left: 1.5em;
+#aboutme img{
+    width: 20em;
+    object-fit: contain;
 }
 #aboutme{
    background-color: #EAE5FA;
     color:#271B46;
     padding: 3em;
-}
-.me{
-    display: block;
-    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 .skills{
     list-style-position: inside;
     margin-top: 1em;
 }
-
+.about-text{
+    margin-right: 1em;
+}
 #services{
     padding: 3em;
     color:#271B46;
@@ -188,6 +185,12 @@ ul span{
     color:#271B46;
 }
 @media (max-width: 600px) {
+    #aboutme, #projects{
+        padding: 1.5em;
+    }
+    #aboutme img{
+        width: calc(100vw - 3em);
+    }
     .container{
         flex-direction: column;
         padding: 8%;
@@ -227,26 +230,33 @@ ul span{
       }
     #menu{
         display: flex;
-        gap: 1em;
-        flex-direction: column;
-        
-    }
-    .mymenu{
-        display: block !important;
+        gap: 2em;
+        flex-direction: column;  
     }
     #menucont{
-        display: none;
+        display: block;
         min-width: 10em;
-        width: 45%;
+        width: 60%;
         position: absolute;
         top: 114px;
         right: 0;
         background-color:#3A2A6B;
         padding: 2em;
         z-index: 1;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
     }
-    
+    #menucont.open {
+        max-height: 400px; /* o qualsiasi altezza massima desideri */
+        opacity: 1;
+    }
+    #aboutme{
+         flex-direction: column;
+     }
 }
+/*super thin viewport*/
 @media (max-width: 300px) {
     .container{
         margin: 3.5em 7%;
@@ -272,6 +282,7 @@ ul span{
         overflow: hidden;
     }
 }
+/*contacts and footer*/
 footer{
     background-color:#3A2A6B;
     color: white;
@@ -282,18 +293,33 @@ footer{
     top: 2px;
     letter-spacing: 1px;
 }
+.formcont{
+    display: flex;
+    justify-content: space-around;
+}
 .form{
     background-color: white;
-    padding: 3em;
+    padding: 3em 3em;
     color: #271B46;
+    width: 50%;
+    border: none;
 }
-
-.form h4{
-    padding-bottom: 0.5em;
+form{
+    padding: 0 15%;
+}
+.form h2{
+    padding-bottom: 0.3em;
+}
+.side{
+    padding: 15% 5% 15% 0;
 }
 input{
     margin-bottom: 0.5em;
     height: 2em;
+    width: 100%;
+}
+textarea{
+    width: 100%;
 }
 .foot{
     padding: 2em 2em 1em 2em;
@@ -357,7 +383,6 @@ iconify-icon:hover{
     .grid-container{
         display: flex;
         flex-direction: column;
-        margin: 1em;
     }
 }
 .text2{

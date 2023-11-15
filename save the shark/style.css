@@ -1,31 +1,92 @@
 *{
     margin: 0;
+    padding: 0;
 }
-
+.svg{
+    position: absolute;
+    top: 8em;
+}
 header{
-    background-color: #4A68FC;
+    background: linear-gradient(#019CF7, #4A68FC);
+    padding: 2em 2em 1em 2em;
+    display: flex;
+    flex-direction: column;
+}
+header a{
+    color: #1b1c1e;
+}
+body{
+    background-color: #f5f5fa;
+    color: #1b1c1e;
 }
 
+nav{
+    text-align: center;
+    word-spacing: 2.5rem; 
+    font-size: 1.2em;
+    font-weight: 600;
+}
+span{
+    word-spacing: normal;
+}
 h1, h2, h3{
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
 }
 p, li, a{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Fira Sans', Arial, sans-serif;
+    text-decoration: none;
+}
+#logo{
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 0.5em;
 }
 h1{
     margin-bottom: 0.5em;
+    display: inline;
+}
+h2{
+    font-size: 4.5em;
+    margin-bottom: 0.3em;
+}
+.calling{
+    padding: 4em;
+    color: #f5f5fa;
+}
+#lowheader{
+    background-image: url(immagini/back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 10em 5em 5em 5em;
+    text-align: center;
+}
+.btn{
+    background-color: #A7BDCD;
+    display: block;
+    width: max(160px, 13%);
+    margin: 0 auto;
+    padding: 16px 32px;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 1.2em;
+
 }
 /*discover*/
 .container{
-    margin: 0 1em 0 1em;
-    padding: 2em;
+    margin: 1em 0;
+    padding: 4em;
+    margin-bottom: 2em;
 }
 .flex{
     display: flex;
+    gap: 3em;
 }
 section{
     margin-bottom: 0.7em;
+}
+section ul{
+    list-style-position: inside;
 }
 #list a{
     display: block;
@@ -33,29 +94,37 @@ section{
     color: #24337D;
     background-color: #E1E6FE;
     border: solid #24337D;
+    margin: 0.6rem 0;
     padding: 0.6rem;
-    margin: 0.6rem;
+    text-align: center;
 }
 #list{
-    width: 65%;
+    width: max(900px, 70%);
+    flex-grow: 1;
 }
-
-
+.species{
+    padding: 0;
+}
 .shark{
-    margin-bottom: 2em;
+    padding: 2em 4em;
 }
 .shark-data{
     list-style-type: none;
     padding-inline-start: 0;
 }
 .shark img, .shark .content{
-    margin: 1em;
+    margin-top: 1em;
 }
-.shark:nth-child(odd) img{
-    float: right;
+
+.shark:nth-child(3n+1){
+    background-color: #24337D;
+    color: #E1E6FE;
 }
-.shark:nth-child(even) img{
-    float: left;
+.shark:nth-child(3n-1){
+    background-color: #A7BDCD;
+}
+.shark:nth-child(3n){
+    background-color: #019CF7;
 }
 @media (max-width: 500px) {
     .flex{

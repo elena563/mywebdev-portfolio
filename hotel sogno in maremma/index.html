@@ -5,9 +5,10 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="hotel, tuscany, italy, maremma, nature, landscape, pool, comfort">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="immagini/favicon2.png">
+        <link rel="icon" type="image/png" href="immagini/favicon3.png">
         <link rel= "stylesheet" href= "style.css">
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -16,12 +17,19 @@
                     <a href="index.html"><h1>Hotel <span style="font-style: normal;">★★★★</span> <br>Sogno in Maremma</h1></a>
                 </div>
                 <nav>
-                    <ul>
-                        <li><a href="#chisiamo" class="link"><span>Chi siamo</span></a></li>
-                        <li><a href="" class="link"><span>Le nostre camere</span></a></li>
-                        <li><a href="" class="link"><span>I servizi</span></a></li>
-                        <li><a href="" class="link"><span>Prenota ora</span></a></li>
-                    </ul>
+                    <div id="menucont">
+                        <ul>
+                            <li><a href="#chisiamo" class="link"><span>Chi siamo</span></a></li>
+                            <li><a href="rooms.html" class="link"><span>Le nostre camere</span></a></li>
+                            <li><a href="" class="link"><span>I servizi</span></a></li>
+                            <li><a href="" class="link"><span>Prenota ora</span></a></li>
+                        </ul>
+                    </div>
+                    <div id="ham" onclick="show()">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
                 </nav>
             </div>
             <div class="lowheader">
@@ -30,6 +38,7 @@
         </header>
         <main>
             <div id="chisiamo">
+                <!--introduction to the hotel-->
                 <h3>Esplora l'Emozione della Vacanza</h3>
                 <p>Unisciti a noi per trascorrere un soggiorno unico ed 
                     indimenticabile in un luogo che incarna la perfetta fusione tra modernità e tradizione. Le nostre porte sono aperte 
@@ -73,5 +82,6 @@
                 <p class="f-logo">HSM</p>
             </div>
         </footer>
+        <script src="script.js" type="text/javascript"></script>
     </body>
 </html>
