@@ -27,17 +27,17 @@ h4{
     font-size: 130%;
 }
 header{
-    background-color:#3A2A6B;
+    background-color:#5a4180;
     color: white;
 }
 header a{
     color: white;
     text-decoration: none;
-    padding: 0.3em;
+    padding: 0.2em;
     border-radius: 3px;
 }
 header :is(a, ul span):hover{
-    background-color: #44317D;
+    background-color: #664992;
 }
 .navbar {
     display: flex;
@@ -66,7 +66,6 @@ nav {
 }
 ul span{
     word-spacing: normal;
-    padding: 0.3em;
 }
 /*bottoni*/
 .btn{
@@ -208,7 +207,12 @@ ul span{
         max-width: 75vw;
         margin-right: 0.1em;
     }
-    #ham{
+    #aboutme{
+        flex-direction: column;
+    }
+}
+@media (max-width: 700px) {
+    .ham{
         display: block;
         height: 26px;
         width: 32px;
@@ -217,16 +221,24 @@ ul span{
         align-self: center;
         right: 2em;
         display: flex;
+        background: transparent;
         z-index: 1;
         flex-direction: column;
         justify-content: space-between;
     }
+      
+    .ham input {
+        display: none;
+      }
+      
     .line {
         display: block;
         height: 4px;
         width: 100%;
         border-radius: 10px;
         background: white;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
       }
     #menu{
         display: flex;
@@ -240,7 +252,7 @@ ul span{
         position: absolute;
         top: 114px;
         right: 0;
-        background-color:#3A2A6B;
+        background-color:#5a4180;
         padding: 2em;
         z-index: 1;
         max-height: 0;
@@ -252,9 +264,31 @@ ul span{
         max-height: 400px; /* o qualsiasi altezza massima desideri */
         opacity: 1;
     }
-    #aboutme{
-         flex-direction: column;
-     }
+    .line1{
+        transform-origin: left center;
+    }
+    .line2{
+        transform: translateY(-50%);
+        transform-origin: left center;
+    }
+    .line3{
+        transform-origin: left center;
+        transform: translateY(-100%);
+    }
+    .ham input:checked ~ .line1 {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 5px;
+    }     
+    .ham input:checked ~ .line2 {
+        width: 0%;
+        opacity: 0;
+    }      
+    .ham input:checked ~ .line3 {
+        transform: rotate(-45deg);
+        top: 28px;
+        left: 5px;
+    }
 }
 /*super thin viewport*/
 @media (max-width: 300px) {
@@ -284,7 +318,7 @@ ul span{
 }
 /*contacts and footer*/
 footer{
-    background-color:#3A2A6B;
+    background-color:#5a4180;
     color: white;
 }
 /*logo in footer*/
@@ -363,7 +397,7 @@ ion-icon{
     font-size: 24px;
 }
 iconify-icon:hover{
-    background-color: #44317D;
+    background-color: #664992;
 }
 #social{
     display: flex;

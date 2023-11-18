@@ -5,29 +5,32 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="shark, marine animals, fish, ocean, environment, turtle, dolphin, sea, water, pollution, plasticfree">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="immagini/favicon.html">
+        <link rel="icon" type="image/png" href="immagini/favi.png">
         <link rel= "stylesheet" href= "style.css">
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;0,800;1,400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <a href="index.html"><div id="logo">
-                <img src="immagini/icon.png" height="32em" width="32em">
-                <h1>SAVE THE SHARK</h1>
-                <p>No-profit Organisation</p>
-            </div></a>
+            <div class="flex-head">
+                <a href="index.html"><div id="logo">
+                    <img src="immagini/icon.png" height="32em" width="32em">
+                    <h1>SAVE THE SHARK</h1>
+                    <p>No-profit Organisation</p>
+                </div></a>
+                <i class="fa-solid fa-cart-shopping fa-xl" style="color: #1b1c1e;"></i>
+            </div>
             <nav>
                 <ul>
                     <a href="#about">About</a>
                     <a href="">Donate</a>
                     <a href=""><span>Join us</span></a>
-                    <a href="">Merch</a>
+                    <a href="merch.html">Merch</a>
                     <a href="discover.html">Discover</a>
                 </ul>
             </nav>
         </header>
-        <img src="wave-haikei.svg" class="svg" width= "100%" alt="">
+        <img src="immagini/wave-haikei3-cropped.svg" class="svg" width= "100%" alt="">
         <main>
             <div id="lowheader">
                 <div class="calling">
@@ -36,9 +39,65 @@
                 </div>
             </div>
             <div id="about">
-                <p></p>
+                <div class="flex-cont">
+                    <div class="text">
+                        <h3>Our Mission</h3>
+                        <p>Since 2017 Save the Shark is a non-profit organization dedicated to the preservation 
+                            of the sea and marine fauna. Our mission is to conserve marine ecosystems and 
+                            protect sharks, crucial creatures for the balance of the oceans.</p>
+                        <p>We conduct in-depth research on shark life and marine ecosystems. We implement 
+                            educational programs to raise public awareness about the importance of protecting 
+                            the oceans. We collaborate with scientific institutions, governments, and other 
+                            organizations to develop effective conservation policies.</p>
+                        <h3 class="del">Our Goals</h3>
+                        <p>Our main goal is to ensure the long-term survival of sharks and the health of the 
+                            oceans. We aim to reduce marine pollution, preserve critical marine habitats, and 
+                            promote sustainable fishing practices.</p>
+                    </div>
+                    <img src="immagini/pollution.jpg" alt="sea pollution">
+                </div>
+                <h3 class="del center">Why Shark?</h3>
+                <p>Sharks are essential for maintaining balance in marine ecosystems. As top predators, 
+                    they regulate the population of other marine species, contributing to biodiversity. 
+                    Their preservation is crucial for the overall well-being of the oceans. If you want to 
+                    learn more about them, visit our <a href="discover.html"><strong>discover</strong></a> section</p>
             </div>
         </main>
+        <footer>
+            <div id="ftcontainer">
+                <div id="logo">
+                    <img src="immagini/icon.png" height="24em" width="24em">
+                    <h1 class="flogo">SAVE THE SHARK</h1>
+                    <p>No-profit Organisation</p>
+                    <a href="" class="ftbtn">Donate now</a>
+                </div>
+                <div class="foot">
+                    <h5>About us</h5> <br>
+                    <a href="" class="ftlink">Who are we?</a><br>
+                    <a href="" class="ftlink">Join us</a><br>
+                    <a href="" class="ftlink">Projects and missions</a>
+                </div>
+                <div class="foot">
+                    <h5>Need some help?</h5> <br>
+                    <a href="" class="ftlink">FAQ's</a> <br>
+                    <a href="" class="ftlink">Support</a>
+                </div>
+                <div class="foot form">
+                    <h5>Contacts and social</h5> <br>
+                    <p>info@savetheshark.com</p>
+                    <div class="social">
+                        <iconify-icon icon="mdi:instagram" style="color: #1b1c1e;" width="24" height="24"></iconify-icon>
+                        <iconify-icon icon="ri:facebook-fill" style="color: #1b1c1e;" width="24" height="24"></iconify-icon>
+                        <iconify-icon icon="ic:baseline-tiktok" style="color: #1b1c1e;" width="24" height="24"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+            <p class="cr">© 2017 Save the Shark. All rights reserved. Save the Shark is a registered non-profit organization. Contributions to Save 
+                the Shark are tax-deductible to the extent permitted by law. The information on this website is for general informational 
+                purposes only and does not constitute professional advice. By using this website, you agree to our Terms of Service and 
+                Privacy Policy.</p>
+        </footer>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://kit.fontawesome.com/cc3bfee917.js" crossorigin="anonymous"></script>
     </body>
 </html>

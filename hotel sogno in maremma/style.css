@@ -142,7 +142,7 @@ main p{
 }
 .button{
     display: block;
-    width: max(160px, 13%);
+    width: min(250px, 85%);
     margin: 0 auto;
     background-color: #8C5B26;
     padding: 16px 32px;
@@ -202,6 +202,8 @@ form{
     display: flex;
     flex-direction: column;
     gap:2em;
+    min-width: 290px;
+    max-width: 320px;
 }
 fieldset{
     display: flex;
@@ -210,7 +212,6 @@ fieldset{
 }
 .two{
     justify-content: space-around;
-    min-width: 20em;
 }
 .three{
     justify-content: space-between;
@@ -219,16 +220,17 @@ fieldset{
 form input{
     display: inline;
     border: none;
+    width: 100%;
     padding: 0.5em;
     margin-top: 0.3em;
     font-size: 0.9em;
     justify-self: center;
 }
-.two :is(input, label){
-    width: 9em;
+.two label{
+    width: 8em;
 }
-.three :is(input, label){
-    width: 5em;
+.three label{
+    width: 4em;
 }
 form input:focus{
     outline: 2px solid #8C5B26;
@@ -241,7 +243,7 @@ label{
     height: unset;
 }
 form .button{
-    width: 45%;
+    width: 80%;
 }
 footer{
     background-color: #821d1d;
@@ -266,22 +268,25 @@ footer{
         padding-bottom: 25%;
         font-size: 3rem;
     }
+    .formprenotazione{
+        margin: 1em 2em 2em 2em;
+    }
 }
 /*some little screen adjustments*/
-@media screen and (max-width: 500px){
-    grid-container{
-        gap: 0.5em;
-    }
+@media screen and (max-width: 600px){
     .formprenotazione{
         flex-direction: column;
         gap: 1em;
-        margin: 1em 2em 2em 2em;
+        align-items: center;
     }
     .grid-container{
         display: flex;
         overflow-x: scroll;
         align-items: center;
         height: 90vh;
+    }
+    #chisiamo, .formprenotazione{
+        margin: 1.5em;
     }
 }     
 
