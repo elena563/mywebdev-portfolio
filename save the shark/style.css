@@ -7,7 +7,7 @@
     position: absolute;
     top: 8em;
 }
-#about, #store{
+#about, #store, .store-link{
     margin: 5em;
 }
 header{
@@ -84,6 +84,9 @@ h2{
     font-size: 1.2em;
     color: #1b1c1e;
 }
+.btn:hover{
+    background-color: #86A5BB;
+}
 .flex-cont{
     display: flex;
     gap: 5em;
@@ -116,7 +119,7 @@ footer{
     justify-content: space-between;
     margin-bottom: 1rem;
 }
-footer a{
+.ftlink{
     color: #1b1c1e;
 }
 .flogo{
@@ -218,6 +221,12 @@ section{
     .shark img{
         float: none;
     }
+}
+.store-link{
+    text-align: center;
+}
+.store-link a{
+    width: max(200px, 13%);
 }
 /*merch*/
 .container1{
