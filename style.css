@@ -334,9 +334,9 @@ footer{
 .form{
     background-color: white;
     padding: 3em 3em;
-    color: #271B46;
     width: 50%;
     border: none;
+    color: #271B46;
 }
 form{
     padding: 0 15%;
@@ -351,9 +351,16 @@ input{
     margin-bottom: 0.5em;
     height: 2em;
     width: 100%;
+    border: solid rgba(31, 27, 70, 0.3) 1px;
+    color: #271B46;
+}
+:is(input, textarea):focus{
+    border: solid #7F5BEB 2px;
+    outline:none;
 }
 textarea{
     width: 100%;
+    border: solid rgba(31, 27, 70, 0.3) 1px;
 }
 .foot{
     padding: 2em 2em 1em 2em;

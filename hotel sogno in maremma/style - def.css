@@ -444,16 +444,24 @@ h5, h4{
 .room_gallery.open {
     max-height: 300px; /* o qualsiasi altezza massima desideri */
     opacity: 1;
+    width: 100%
 }
 .r-text{
     display: flex;
     gap: 1em;
+    flex-grow: 2;
 }
 .r-images{
     display: flex;
+    flex-basis: 70%;
     gap: 1em;
+    flex-grow: 1;
+    overflow-x: scroll;
 }
-@media (max-width: 800px){
+.mobile{
+    display: none;
+}
+@media (max-width: 700px){
     .room_gallery{
         flex-direction: column;
     }
@@ -466,8 +474,27 @@ h5, h4{
 }
 @media (max-width: 500px){
     .slot{
-        flex-direction: column;
+        flex-wrap: wrap;
         height: unset;
+    }
+    #rooms{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile{
+        display: block;
+        margin-top: 2em;
+    }
+    .comfort.desktop, .vasca.desktop{
+        display: none;
+    }
+}
+@media (max-width: 500px){
+    .r-text{
+        flex-direction: column;
+    }
+    .price{
+        text-align: center;
     }
 }
 .padding{

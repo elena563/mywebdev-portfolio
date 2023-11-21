@@ -6,7 +6,7 @@
         <meta name="keywords" content="hotel, tuscany, italy, maremma, nature, landscape, pool, comfort">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="immagini/favicon3.png">
-        <link rel= "stylesheet" href= "style.css">
+        <link rel= "stylesheet" href= "style - def.css">
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
         
@@ -36,9 +36,9 @@
         </header>
         <div id="rooms">
             <div class="slot"> <!--slot camere che si aprono con js-->
-                <div class="room-option economy ">   
+                <div class="room-option economy desktop">   
                     <h4 class="room-type">Camera Economy</h4></div>
-                <div class="room-option comfort"> 
+                <div class="room-option comfort desktop"> 
                     <h4 class="room-type">Camera Comfort</h4>
                 </div>
             </div>
@@ -69,6 +69,9 @@
                     <img src="immagini/camera letti singoli.jpg" alt="" height="200em">
                 </div>
             </div>
+            <div class="room-option comfort mobile"> 
+                <h4 class="room-type">Camera Comfort</h4>
+            </div>
             <div class="room_gallery">
                 <div class="r-text">
                     <div class="flex-desc">
@@ -98,10 +101,10 @@
                 </div>
             </div>
             <div class="slot">
-                <div class="room-option deluxe"> 
+                <div class="room-option deluxe desktop"> 
                     <h4 class="room-type">Suite Deluxe</h4>
                 </div>
-                <div class="room-option vasca"> 
+                <div class="room-option vasca desktop"> 
                     <h4 class="room-type">Suite con Vasca Idromassaggio</h4>
                 </div>
             </div>
@@ -116,8 +119,7 @@
                             <p>La Suite Deluxe rappresenta l'eccellenza del nostro hotel.
                             Questa spaziosa suite è arredata con gusto, offrendo un ambiente lussuoso e 
                             raffinato. Con una zona living separata e servizi esclusivi, la Suite Deluxe è 
-                            pensata per coloro che cercano un'esperienza di soggiorno straordinaria. Goditi il
-                            massimo comfort e lasciati coccolare nei dettagli di questa suite di lusso.</p>
+                            pensata per coloro che cercano un'esperienza di soggiorno straordinaria.</p>
                         </div>
                     </div>
                     <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
@@ -135,6 +137,9 @@
                     <img src="immagini/bagno deluxe.jpg" alt="" height="200em">
                 </div>
            </div>
+            <div class="room-option vasca mobile"> 
+                <h4 class="room-type">Suite con Vasca Idromassaggio</h4>
+            </div>
             <div class="room_gallery">
                 <div class="r-text">
                     <div class="flex-desc">
@@ -142,11 +147,10 @@
                             <h5>Suite con Vasca Idromassaggio</h5>
                             <p>35m<sup>2</sup> doppia | 45m<sup>2</sup> quadrupla <br></p>
                         </div>
-                    <div class="room-desc"><p>La Suite con Vasca Idromassaggio offre un'esperienza di 
-                    relax senza pari. Oltre agli arredi eleganti e ai comfort di una suite di alto 
-                    livello, questa suite dispone di una vasca idromassaggio privata. Rilassati e 
+                    <div class="room-desc"><p>La Suite con Vasca Idromassaggio privata offre un'esperienza di 
+                    relax senza pari. Rilassati e 
                     lascia che la dolce intimità delle bolle ti porti via lo stress, creando ricordi 
-                    indimenticabili della tua permanenza nella suggestiva Maremma.</p></div>
+                    indimenticabili della tua permanenza.</p></div>
                     </div>
                     <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
                         <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
@@ -166,8 +170,39 @@
         </div>
     </body>
     <footer>
-        <div>
-            <p class="f-logo">HSM</p>
+        <div id="ftcontainer">
+            <div>
+                <div class="hsm">
+                    <p class="f-logo">HSM</p>
+                    <span>★★★★</span>
+                </div>
+                <p>p.iva IT 00000000000<br>
+                    info@hotelsognoinmaremma.com
+                </p>
+            </div>
+            <div class="subcont">
+                <div class="foot">
+                    <h5>Info</h5> <br>
+                    <a href="">Termini e condizioni</a><br>
+                    <a href="">Politica sulla privacy</a><br>
+                    <a href="">Newsletter</a>
+                </div>
+                <div class="foot">
+                    <h5>Altro</h5> <br>
+                    <a href="">VIP spa e piscine</a> <br>
+                    <a href="">Menu ristorante</a><br>
+                    <a href="">Escursioni nella Maremma</a><br>
+                    <a href="">Eventi</a>
+                </div>
+                <div class="foot form">
+                    <div class="social">
+                            <iconify-icon icon="mdi:instagram" style="color: #821d1d;" width="24" height="24"></iconify-icon>
+                            <iconify-icon icon="ri:facebook-fill" style="color: #821d1d;" width="24" height="24"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="cr">© 2023 Hotel Sogno in Maremma. Tutti i diritti riservati.</p>
         </div>
     </footer>
     <script src="script.js" type="text/javascript"></script>

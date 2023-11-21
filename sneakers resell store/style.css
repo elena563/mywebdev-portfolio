@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, nav, button, .btn{
  .link {
     color:black;
     text-decoration: none;
-    padding: 0.7em;
+    padding: 0.5em;
     border: solid transparent;
   }
   .link:hover ,.icon:hover{
@@ -132,17 +132,40 @@ footer{
     color: white;
     text-decoration: none;
   }
+  .foot a:hover{
+    text-decoration: underline;
+  }
   .form{
     width: 20%;
   }
   form input{
     display: inline-block;
-    width: 60%;
+    width: 100%;
     margin-top: 0.5em;
+    background-color: black;
+    border-bottom: 2px solid white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color:#ffffff;
   }
   textarea{
     margin-top: 0.5em;
     margin-right: 1em;
+    background-color: black;
+    border: 2px solid white;
+    color:#ffffff;
+  }
+  form input:focus{
+    border-bottom: 4px solid white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+  }
+  textarea:focus{
+    border: 4px solid white;
+    outline: none;
   }
   .negbtn{
     display: inline-block;

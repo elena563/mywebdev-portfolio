@@ -24,8 +24,11 @@ header i{
     margin: 0.7em;
     cursor: pointer;
 }
-:is(header, #about, #store) a{
+:is(header, #about, #store, footer) a{
     color: #1b1c1e;
+}
+:is(#about, footer) a:not(.ftbtn):hover{
+    text-decoration: underline;
 }
 body{
     background-color: #f5f5fa;
@@ -93,8 +96,9 @@ h2{
 }
 #about img{
     width: 37%;
+    object-fit: cover;
 }
-:is(#about, #store) p{
+:is(#about, #store) p, #about ul{
     margin-top: 1rem;
     line-height: 2rem;
 }
@@ -107,6 +111,32 @@ h3{
 .center{
     text-align: center;
 }
+.data{
+    text-align: center;
+    flex-basis: 30%;
+    padding: 1.5rem;
+    border: #62B0FE solid 1px;
+    border-radius: 12%;
+}
+#about span{
+    font-size: 3em;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    color: #62B0FE;
+}
+.data p{
+    font-size: 0.9rem;
+}
+@media (max-width: 800px) {
+    .flex-col{
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+    }
+    .data{
+        width: 65%
+    }
+}
 /*footer*/
 footer{
     background-color: #62B0FE;
@@ -118,9 +148,6 @@ footer{
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-}
-.ftlink{
-    color: #1b1c1e;
 }
 .flogo{
     font-size: 1.5em;
@@ -139,6 +166,10 @@ footer{
     text-align: center;
     width: 80%;
     margin-top: 1rem;
+}
+.ftbtn:hover{
+    text-decoration: none;
+    border: #1b1c1e solid 2px;
 }
 iconify-icon{
 margin-top: 1rem;
