@@ -164,6 +164,12 @@ ul span{
     margin-bottom: 10px;
 }
 
+.grid-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 1em;
+    justify-content: center;
+}
 #projects{
     background-color: #f5d7db;
     padding: 0.7em 0.7em 2em 0.7em;
@@ -174,6 +180,10 @@ ul span{
 }
 .work{
     background-color: white;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
 }
 .work img{
     width: 100%;
@@ -183,6 +193,29 @@ ul span{
     margin: 1em;
     color:#271B46;
 }
+.readme{
+    text-decoration: none;
+    padding: 8px 18px 8px 15px;
+    font-size: 0.8rem;
+    color:#271B46;
+    border: solid #271B46 0.5px;
+    border-radius: 5px;
+}
+.readme:hover{
+    text-decoration: underline;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+.buttons > * {
+    margin: 0;
+  }
 @media (max-width: 600px) {
     #aboutme, #projects{
         padding: 1.5em;
@@ -268,12 +301,10 @@ ul span{
         transform-origin: left center;
     }
     .line2{
-        transform: translateY(-50%);
         transform-origin: left center;
     }
     .line3{
         transform-origin: left center;
-        transform: translateY(-100%);
     }
     .ham input:checked ~ .line1 {
         transform: rotate(45deg);
@@ -413,12 +444,6 @@ iconify-icon:hover{
     padding: 0.5em 0 0.5em 0;
     font-style: italic;
     text-align: center;
-}
-.grid-container{
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    gap: 1em;
-    justify-content: center;
 }
 @media (max-width: 600px) {
     .grid-container{

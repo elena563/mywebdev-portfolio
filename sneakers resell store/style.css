@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body{
     font-family: 'Cooper Hewitt', "Geneva", Tahoma, sans-serif;
     margin: 0;
@@ -6,17 +9,36 @@ body{
 	font-family: 'Poppins';
 	src: local('poppins'), url('Poppins-Bold.otf') format('truetype');
 	}
-@font-face {
-  font-family: 'Cooper Hewitt';
-	src: local('cooper-hewitt'), url('CooperHewitt-Book.otf') format('truetype');
-}
+  @font-face {
+    font-family: 'Cooper Hewitt Book';
+    src: local('Cooper Hewitt Book'), url('CooperHewitt-Book.otf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Cooper Hewitt Semibold';
+    src: local('Cooper Hewitt Semibold'), url('CooperHewitt-Semibold.otf') format('truetype');
+  }
 h1, h2, h3, h4, h5, nav, button, .btn{
   font-family: 'Poppins'
+}
+h1{
+  font-size: 3.5em;
+  font-weight:900;
+  margin-bottom: 0;
+}
+.hmain p{
+  font-family: 'Cooper Hewitt Semibold';
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+#ham{
+  display: none;
 }
   .navbar {
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
+    padding: 0 1.5em;
   }
   .navbar2{
     display: flex;
@@ -36,8 +58,9 @@ h1, h2, h3, h4, h5, nav, button, .btn{
     text-align: right;
   }
   .hmain{
-    text-align: center;
+    text-align: left;
     margin: 8em 0 8em 0;
+    padding: 2.5em 3em;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
     background-color: rgba(255, 255, 255, 0.5);
@@ -56,12 +79,8 @@ h1, h2, h3, h4, h5, nav, button, .btn{
     padding: 0.5em;
     border: solid transparent;
   }
-  .link:hover ,.icon:hover{
+  .link:hover ,.icon:hover:not(.ham){
     border: solid black;
-  }
-  .menu {
-    width: 120px;
-    display: none;
   }
   .btn{
     display: inline-block;
@@ -79,11 +98,11 @@ h1, h2, h3, h4, h5, nav, button, .btn{
   }
   .logo{
     position: relative;
-    left: 1em;
+    left: 0.5em;
   }
   .icon{
-    margin: 0.5em;
-    padding: 0.7em;
+    padding: 0.3em;
+    margin: 0 0.2em;
     border: solid transparent;
   }
 footer{
@@ -95,7 +114,7 @@ footer{
   #ftcontainer{
     display: flex;
     justify-content: space-between;
-    margin: 3em 1.5em 2em 1.5em;
+    margin: 2em;
     gap: 1em;
   }
   footer p{
@@ -107,7 +126,7 @@ footer{
     flex-grow: 0.5;
   }
   .foot{
-    width: 17%;
+    width: 15%;
     display: flex;
     flex-direction: column;
   }
@@ -135,8 +154,8 @@ footer{
   .foot a:hover{
     text-decoration: underline;
   }
-  .form{
-    width: 20%;
+  form{
+    width: 100%;
   }
   form input{
     display: inline-block;
@@ -155,6 +174,7 @@ footer{
     background-color: black;
     border: 2px solid white;
     color:#ffffff;
+    width: 100%;
   }
   form input:focus{
     border-bottom: 4px solid white;
@@ -177,7 +197,7 @@ footer{
     border-radius: 10px;
     text-decoration: none;
     font-weight: 550;
-    width: 30%;
+    width: 5em;
   }
   .negbtn:hover{
     background-color: white;
@@ -255,36 +275,6 @@ footer{
   .offer{
     font-weight: bold;
   }
-  .btn_responsivemenu{display: none;float: right;padding:5px;cursor:pointer;margin:  0px 20px 0 0;color: #ffffff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);background:#333;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
-
-	.icon-bar{display: block;width: 18px;height: 2px;margin:5px;background-color: #f5f5f5;-webkit-border-radius: 1px;-moz-border-radius: 1px;border-radius: 1px;-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);}
-
-	.show{display:block!important}
-  @media (max-width: 767px) {
-
-    /* Header */
-  
-    #site-title a {font-size:25px;margin-left:10px;}
-  
-    nav			{display:none;}
-  
-    nav ul li 	{float: none;}
-  
-  
-    .btn_responsivemenu{display:block;}
-  
-  
-  }
-  
-  @media (max-width: 500px) {
-    #ftcontainer{
-      flex-direction: column;
-      padding: 0 2em;
-    }
-    .foot{
-      width: 100%;
-    }
-  }
 
   /*streetwear*/
   .filters{
@@ -322,14 +312,111 @@ footer{
     grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     gap: 1em;
   }
-  @media (max-width: 500px) {
-    .sw{
-      background-image: url(streetwear/backresp.jpg);
-    }
-    .filters{
-      visibility: hidden;
+@media (max-width: 860px) {
+  .navbar{
+    justify-content: space-between;
+  }
+  /*hamburger menu*/
+  #menucont ul{
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 2em;
+    height: 80vh;
+    position: relative;
+    top: 2em;
+}
+  .header-icons{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  #menucont{
+      display: block;
+      width: 100vw;
+      height: 100vh; 
       position: absolute;
-    }
+      top: 0;
+      left: 0;
+      background-color: rgba(245, 245, 250, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 2em;
+      z-index: 2;
+      min-height: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+  }
+  .ham{
+      height: 33px;
+      width: 37px;
+      display: flex;
+      z-index: 3;
+      flex-direction: column;
+      justify-content: space-between;
+      background: transparent;
+      align-items: center;
+  }
+  .ham input {
+    display: none;
+  }
+  .line {
+      flex-basis: 15%;
+      width: 100%;
+      border-radius: 5px;
+      background: #1b1c1e;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+  }
+  #menucont.openmenu {
+    opacity: 1;
+    max-height: 100vh; 
+}
+  #menucont li{
+    font-size: 2.5em;
+  }
+  .line1{
+    transform-origin: left center;
+  }
+  .line2{
+      transform-origin: left center;
+  }
+  .line3{
+      transform-origin: left center;
+  }
+  .ham input:checked ~ .line1 {
+      transform: rotate(45deg);
+      top: 0px;
+      left: 5px;
+  }     
+  .ham input:checked ~ .line2 {
+      width: 0%;
+      opacity: 0;
+  }      
+  .ham input:checked ~ .line3 {
+      transform: rotate(-45deg);
+      top: 28px;
+      left: 5px;
+  }
+}
+@media (max-width: 550px) {
+  #ftcontainer{
+    flex-direction: column;
+    padding: 0 2em;
+  }
+  .foot{
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .sw{
+    background-image: url(streetwear/backresp.jpg);
+  }
+  .filters{
+    visibility: hidden;
+    position: absolute;
+  }
     /*.container2 .product{
       width: 10em;
     }

@@ -1,5 +1,9 @@
-$(".btn_responsivemenu").click(function() {
+function show() {
+  const menu = document.getElementById("menucont");
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
 
-    $("nav").toggleClass("show");
-  
-  });
+  if (isMobile) {
+      // Se la media query è attiva, mostra/nascondi il menu
+      menu.classList.toggle("openmenu");
+  }
+}

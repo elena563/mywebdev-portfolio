@@ -7,14 +7,11 @@ function show() {
         menu.classList.toggle("openmenu");
     }
 }
-function checkIfMobile() {
-    // Utilizza la stessa condizione per determinare se il dispositivo è mobile
-    return window.matchMedia("(max-width: 500px)").matches;
-  }
+
 document.addEventListener('DOMContentLoaded', function () {
     const roomOptions = document.querySelectorAll('.room-option.desktop');
     const roomGalleries = document.querySelectorAll('.room_gallery');
-    let isMobile = checkIfMobile();
+    let isMobile = window.matchMedia("(max-width: 500px)").matches;;
 
     roomOptions.forEach(function (roomOption, index) {
         
@@ -58,9 +55,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//price generator
+function getprice() {
+    let people = adults + kids;
+    let price = 0;
+    let rooms = [69, 85, 102, 120]
+for (el of rooms) {
+    price += (price*(10/100))*(adults-1)    /*increase for every added adult*/
+    price += (price*(5/100))*kids           /*increase for every kid*/
+    price += (price*(10/100))*season        /*low, medium, high season*/  
+    price += (price*(10/100))*board        /*b&b, half, full board*/  
+    if (people >= 2){
+        rooms.pop()         /*jacuzzi room only for two people*/
+    }
+}   return rooms
+}
 
+function optionConverter(string) {  /*stringa -> numero*/
+    switch (parola) {
+        case 'Bassa':
+        case 'B&B':
+            return 1;
+        case 'Mezza':
+            return 2;
+        case 'Alta':
+        case 'Completa':
+            return 3;
+    }
+}
 
-
+const adults = document.querySelector('.adults').value;
+const kids = document.querySelector('.kids').value;
+const season = optionConverter(document.querySelector('.season').value);
+const board = optionConverter(document.querySelector('.board').value);
+let nRooms = document.querySelector('.rooms').value;;
 
 
 

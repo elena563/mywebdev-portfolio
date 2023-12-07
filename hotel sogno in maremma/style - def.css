@@ -68,56 +68,7 @@ nav a{
     color:#FCFAFA;
     text-decoration: none;
 }
-/*responsive dropdown header for mobile*/
-@media (max-width: 1100px) {
-    ul{
-        display: flex;
-        gap: 2em;
-        flex-direction: column;  
-    }
-    #menucont{
-        display: block;
-        width: 100%;
-        position: absolute;
-        top: 63px;
-        left: 0;
-        background-color:#821d1d;
-        padding: 2em;
-        padding-top: 6em;
-        z-index: 2;
-        min-height: 0;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.5s ease, opacity 0.5s ease;
-    }
-    .logo{
-        z-index: 3;
-    }
-    #ham{
-        display: block;
-        height:19.5px;
-        width: 24px;
-        position: absolute;
-        top: 23px;
-        align-self: center;
-        right: 2em;
-        display: flex;
-        z-index: 1;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .line {
-        display: block;
-        height: 3px;
-        width: 100%;
-        background: white;
-      }
-      #menucont.openmenu {
-        max-height: 482px; /* o qualsiasi altezza massima desideri */
-        opacity: 1;
-    }
-}
+
 /*main page*/
 body{
     background-color: #EDDBC0;
@@ -193,7 +144,7 @@ main p{
     grid-column-end: 3;
 }
 /*services*/
-#services{
+#services, #book-section{
     margin: 1em 4em 1em 4em;
 }
 .cover{
@@ -275,7 +226,18 @@ form input{
     padding: 0.5em;
     margin-top: 0.3em;
     font-size: 0.9em;
-    justify-self: center;
+    text-align: center;
+}
+#book-section form{
+    gap:0;
+}
+
+#book-section form input{
+    margin-top: 0.1em;
+    
+}
+#book-section fieldset{
+    justify-content: space-between;
 }
 .two label{
     width: 8em;
@@ -283,7 +245,7 @@ form input{
 .three label{
     width: 4em;
 }
-form input:focus{
+form :is(input, select):focus{
     outline: 2px solid #8C5B26;
 }
 label{
@@ -295,6 +257,20 @@ label{
 }
 form .button{
     width: 80%;
+}
+select{
+    border: none;
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.1em;
+    cursor: pointer;
+}
+.select-label{
+    width: 100%;
+    margin-bottom: 1em;
+}
+.flex-cont{
+    display: flex;
 }
 /*footer*/
 footer{
@@ -330,9 +306,25 @@ footer :is(h5, a){
 iconify-icon{
     background-color: #FCFAFA;
     padding: 0.3rem;
-    margin: 0.5rem;
+    margin: 0.1rem;
     border-radius: 100%;
-    display: block;
+}
+.social{
+    margin-top: 1rem;
+}
+@media screen and (max-width: 850px) {
+    #ftcontainer{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px) {
+    .subcont{
+        flex-direction: column;
+        align-items: center;
+    }
+    .foot{
+        text-align: center;
+    }
 }
 /*mobile format titles*/
 @media screen and (max-width: 700px){
@@ -461,42 +453,6 @@ h5, h4{
 .mobile{
     display: none;
 }
-@media (max-width: 700px){
-    .room_gallery{
-        flex-direction: column;
-    }
-    .room_gallery.open {
-        max-height: 700px;
-    }
-    .r-images{
-        overflow-x: scroll;
-    }
-}
-@media (max-width: 500px){
-    .slot{
-        flex-wrap: wrap;
-        height: unset;
-    }
-    #rooms{
-        display: flex;
-        flex-direction: column;
-    }
-    .mobile{
-        display: block;
-        margin-top: 2em;
-    }
-    .comfort.desktop, .vasca.desktop{
-        display: none;
-    }
-}
-@media (max-width: 500px){
-    .r-text{
-        flex-direction: column;
-    }
-    .price{
-        text-align: center;
-    }
-}
 .padding{
     padding: 1em;
 }
@@ -529,4 +485,118 @@ h5, h4{
     width: 80%;
     padding: 8px 16px;
     align-self: flex-end;
+}
+
+/*responsive dropdown header for mobile*/
+@media (max-width: 1100px) {
+    ul{
+        display: flex;
+        gap: 2em;
+        flex-direction: column;  
+    }
+    #menucont{
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 63px;
+        left: 0;
+        background-color:#821d1d;
+        padding: 2em;
+        padding-top: 8em;
+        z-index: 2;
+        min-height: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+    .logo{
+        z-index: 3;
+    }
+    .ham{
+        height:19.5px;
+        width: 24px;
+        position: absolute;
+        top: 23px;
+        align-self: center;
+        right: 2em;
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        background: transparent;
+        align-items: center;
+    }
+    .line {
+        display: block;
+        width: 100%;
+        background: white;
+        flex-basis: 15%;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+      }
+    .ham input {
+      display: none;
+    }
+      #menucont.openmenu {
+        max-height: 482px; /* o qualsiasi altezza massima desideri */
+        opacity: 1;
+    }
+    .line1{
+        transform-origin: left center;
+      }
+      .line2{
+          transform-origin: left center;
+      }
+      .line3{
+          transform-origin: left center;
+      }
+      .ham input:checked ~ .line1 {
+          transform: rotate(43deg);
+          top: 0px;
+          left: 5px;
+      }     
+      .ham input:checked ~ .line2 {
+          width: 0%;
+          opacity: 0;
+      }      
+      .ham input:checked ~ .line3 {
+          transform: rotate(-42deg);
+          top: 28px;
+          left: 5px;
+      }
+}
+@media (max-width: 700px){
+    .room_gallery{
+        flex-direction: column;
+    }
+    .room_gallery.open {
+        max-height: 700px;
+    }
+    .r-images{
+        overflow-x: scroll;
+    }
+}
+@media (max-width: 500px){
+    .slot{
+        flex-wrap: wrap;
+        height: unset;
+    }
+    #rooms{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile{
+        display: block;
+        margin-top: 2em;
+    }
+    .comfort.desktop, .vasca.desktop{
+        display: none;
+    }
+    .r-text{
+        flex-direction: column;
+    }
+    .price{
+        text-align: center;
+    }
 }
