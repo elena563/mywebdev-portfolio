@@ -5,6 +5,7 @@
   }
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #f5f5fa;
 }
 @font-face {
 	font-family: 'Roboto';
@@ -28,10 +29,10 @@ h4{
 }
 header{
     background-color:#5a4180;
-    color: white;
+    color: #f5f5fa;
 }
 header a{
-    color: white;
+    color: #f5f5fa;
     text-decoration: none;
     padding: 0.2em;
     border-radius: 3px;
@@ -70,7 +71,7 @@ ul span{
 /*bottoni*/
 .btn{
     display: inline-block;
-    color: white;
+    color: #f5f5fa;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 30px;
@@ -102,7 +103,7 @@ ul span{
     justify-content: space-between;
 }
 .text{
-    color: white;
+    color: #f5f5fa;
     display: inline;
     margin: 1em;
 }
@@ -136,6 +137,7 @@ ul span{
     padding: 3em;
     color:#271B46;
     max-width: 100%;
+    background-color: #f5f5fa;
 }
 .par{
     margin: 1em 0;
@@ -151,19 +153,19 @@ ul span{
 }
 .product{
     border: solid #271B46;
-    padding: 1em;
-    margin: 0.5em;
-    border-radius: 30px;
-    text-align: center;
+    padding: 2em;
+    margin: 0.5rem;
+    border-radius: 20px;
     width: 23em;
-    text-align: center;
     color: #271B46;
 }
-.product > h3{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.product > h4, .space{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-
+.icon{
+    text-align: center;
+}
 .grid-container{
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -179,7 +181,7 @@ ul span{
     list-style-type: none;
 }
 .work{
-    background-color: white;
+    background-color: #f5f5fa;
     padding: 0;
     display: flex;
     flex-direction: column; 
@@ -201,7 +203,7 @@ ul span{
     border: solid #271B46 0.5px;
     border-radius: 5px;
 }
-.readme:hover{
+.readme span:hover{
     text-decoration: underline;
 }
 .buttons{
@@ -269,7 +271,7 @@ ul span{
         height: 4px;
         width: 100%;
         border-radius: 10px;
-        background: white;
+        background: #f5f5fa;
         transform: rotate(0deg);
         transition: .25s ease-in-out;
       }
@@ -350,7 +352,7 @@ ul span{
 /*contacts and footer*/
 footer{
     background-color:#5a4180;
-    color: white;
+    color: #f5f5fa;
 }
 /*logo in footer*/
 .logo > h4{
@@ -363,7 +365,7 @@ footer{
     justify-content: space-around;
 }
 .form{
-    background-color: white;
+    background-color: #f5f5fa;
     padding: 3em 3em;
     width: 50%;
     border: none;
@@ -420,7 +422,7 @@ textarea{
 }
 .item p, .item a, #social a{
     display: inline-block;
-    color: white;
+    color: #f5f5fa;
     text-decoration: none;
     padding: 0.5vw 1vw;
     border-radius: 3px;
