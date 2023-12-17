@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Save the Shark</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="shark, marine animals, fish, ocean, environment, turtle, dolphin, sea, water, pollution, plasticfree">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="immagini/favi.png">
+        <link rel= "stylesheet" href= "style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;0,800;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="blue">
+            <div class="flex-head">
+                <a href="index.html"><div id="logo">
+                    <img src="immagini/icon.png" height="32em" width="32em">
+                    <h1>SAVE THE SHARK</h1>
+                    <p>No-Profit <span>Organisation</span></p>
+                </div></a>
+                <div class="header-icons">
+                    <i class="fa-solid fa-cart-shopping fa-xl" style="color: #1b1c1e;"></i>
+                    <label class="ham icon" for="ham">
+                        <input type="checkbox" id="ham" onclick=show()>
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </label>
+                </div>
+            </div>
+            <nav>
+                <div id="menucont">
+                    <ul>
+                        <a href="index.html #about">About</a>
+                        <a href="#donation">Donate</a>
+                        <a href="#join"><span>Join us</span></a>
+                        <a href="merch.html">Merch</a>
+                        <a href="discover.html">Discover</a>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <img src="immagini/wave-haikei3-cropped.svg" class="svg" width= "100%" alt="">
+        <section id="donation">
+            <div>
+                <h3>This is why your donation is important</h3>
+                <div class="flex-cont">
+                    <img src="immagini/turtle.jpg" alt="little turtle">
+                    <p>With the generous support of your donations, we've been able to make meaningful strides in marine conservation. From 
+                        conducting vital research expeditions and implementing educational programs to initiating impactful conservation 
+                        projects and advocating for sustainable practices, every dollar you contribute directly fuels these efforts. Your 
+                        donations have enabled us to deploy advanced technologies for research, engage in community outreach, and respond 
+                        swiftly to environmental emergencies. Together, we've built collaborative partnerships, trained local conservationists, 
+                        and launched public awareness campaigns, creating a collective force for the protection of sharks and marine ecosystems.
+                        Your continued support is instrumental in driving these initiatives and ensuring a brighter, more sustainable future 
+                        for our oceans.<br> <strong>Thank you</strong> for being a crucial part of our mission.</p>
+                </div>
+            </div>
+            <form id="gateway">
+                <h4>Payment gateway</h4>
+                <div id="personal-data">
+                    <fieldset>
+                        <label>Full name <br>
+                            <input type="text" class="long" placeholder="Your Name and Surname"></label><br>
+                    </fieldset>
+                    <fieldset>
+                        <label>Email <br>
+                            <input type="text" class="long" placeholder="Your Email"></label><br>
+                    </fieldset>
+                </div>
+                <div id="donation-data">
+                    <fieldset>
+                        <label>How much do you want to donate? <br>
+                        <span><input type="radio" name="amount" value="10"> 10$</span>
+                        <span><input type="radio" name="amount" value="50"> 50$</span>
+                        <span><input type="radio" name="amount" value="100"> 100$</span>
+                        <span><input type="radio" name="amount" value="insert"> <input type="text" placeholder="Insert amount" id="other">$</span>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label>Select the payment method <br>
+                            <span><input type="radio" name="method" value="card"> Credit/debit card <i class="fa-solid fa-credit-card fa-lg" style="color: #1b1c1e;"></i></span>
+                            <span><input type="radio" name="method" value="paypal"> Paypal <i class="fa-brands fa-paypal fa-lg" style="color: #1b1c1e;"></i></span>
+                        </label>
+                    </fieldset>
+                </div>
+                <div id="card-data">
+                    <fieldset>
+                        <label>Cardholder's name <br>
+                        <input type="text" class="long"></label>
+                        <div class="short">
+                            <label>Valid thru <br>
+                                <input type="month"></label>
+                            <label>CVV/CVC <br>
+                                <input type="text" class="cvc"></label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label>Card number <br>
+                        <input type="text" placeholder="0000 0000 0000 0000" class="long"></label>
+                        <button class="long paybtn">Donate</button>
+                    </fieldset>
+                </div>
+            </form>
+        </section>
+        <section id="join">
+            <h3>Do you want to help in a more active way? Volunteer yourself with us!</h3>
+            <p>Compile the form with your information, and you'll be recontacted.</p>
+            <div class="flex-cont joinc">
+                <form action="">
+                    <label>Name <br>
+                        <input type="text" class="long" placeholder="Your Name"></label>
+                    <label>Email <br>
+                        <input type="text" class="long" placeholder="Your Email"></label>
+                    <label>Phone <br>
+                        <input type="text" class="long" placeholder="Your Phone Number"></label>
+                    <button class="jbtn">Apply Now!</button>
+                </form>
+                <img src="immagini/volunteer.jpg" alt="volontario">
+            </div>
+        </section>
+        <footer>
+            <div id="ftcontainer">
+                <div id="logo">
+                    <img src="immagini/icon.png" height="24em" width="24em">
+                    <h1 class="flogo">SAVE THE SHARK</h1>
+                    <p>No-profit Organisation</p>
+                    <a href="" class="ftbtn">Donate now</a>
+                </div>
+                <div class="links">
+                    <div class="foot">
+                        <h5>About us</h5> <br>
+                        <a href="" class="ftlink">Who are we?</a><br>
+                        <a href="" class="ftlink">Join us</a><br>
+                        <a href="" class="ftlink">Projects and missions</a>
+                    </div>
+                    <div class="foot">
+                        <h5>Need help?</h5> <br>
+                        <a href="" class="ftlink">FAQ's</a> <br>
+                        <a href="" class="ftlink">Support</a>
+                    </div>
+                    <div class="foot form">
+                        <h5>Contacts and social</h5> <br>
+                        <p>info@savetheshark.com</p>
+                        <div class="social">
+                            <iconify-icon icon="mdi:instagram" style="color: #1b1c1e;" width="24" height="24"></iconify-icon>
+                            <iconify-icon icon="ri:facebook-fill" style="color: #1b1c1e;" width="24" height="24"></iconify-icon>
+                            <iconify-icon icon="ic:baseline-tiktok" style="color: #1b1c1e;" width="24" height="24"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="cr">© 2017 Save the Shark. All rights reserved. Save the Shark is a registered non-profit organization. Contributions to Save 
+                the Shark are tax-deductible to the extent permitted by law. The information on this website is for general informational 
+                purposes only and does not constitute professional advice. By using this website, you agree to our Terms of Service and 
+                Privacy Policy.</p>
+        </footer>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://kit.fontawesome.com/cc3bfee917.js" crossorigin="anonymous"></script>
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -7,10 +7,10 @@
     position: absolute;
     top: 8em;
 }
-#about, #store, .store-link, .container{
+#about, #store, .store-link, .container, #donation, #join{
     margin: 4em;
 }
-#store, .container{
+#store, .container, #donation{
     margin: 5em;
 }
 header{
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5{
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
 }
-p, li, a{
+p, li, a, label{
     font-family: 'Fira Sans', Arial, sans-serif;
     text-decoration: none;
 }
@@ -97,8 +97,9 @@ h2{
     font-size: 1.2em;
     color: #1b1c1e;
 }
-.btn:hover{
+:is(.btn, .jbtn):hover{
     background-color: #86A5BB;
+    cursor: pointer;
 }
 .flex-cont{
     display: flex;
@@ -108,7 +109,7 @@ h2{
     width: 37%;
     object-fit: cover;
 }
-:is(#about, #store) p, #about ul{
+:is(#about, #store, #donation) p, #about ul, #donation img{
     margin-top: 1rem;
     line-height: 2rem;
 }
@@ -175,9 +176,10 @@ footer{
     width: 80%;
     margin-top: 1rem;
 }
-.ftbtn:hover{
+:is(.ftbtn, .paybtn):hover{
     text-decoration: none;
-    border: #1b1c1e solid 2px;
+    background-color: #95C9FE;
+    cursor: pointer;
 }
 iconify-icon{
 margin-top: 1rem;
@@ -323,6 +325,98 @@ h4{
     width: 100%;
     height: 100%;
   }
+#card-data, #personal-data, .short{
+    display: flex;
+}
+.short{
+    gap: 6rem;
+}
+#donation-data, #card-data fieldset, .joinc form{
+    display: flex;
+    flex-direction: column;
+}
+#card-data fieldset{
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+#card-data fieldset, #personal-data fieldset{
+    flex-basis: 50%;
+}
+#gateway{
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0px 3px 8px 3px rgba(27,28,30,0.25);
+    border-radius: 10px;
+    margin: 3em 0;
+}
+fieldset, #gateway h4{
+    border: none;
+    margin: 0.5rem;
+}
+#gateway span{
+    margin: 0.2rem 0.5rem;
+}
+#other{
+    border: none;
+    width: 90px;
+}
+#other:focus{
+    outline:none;
+}
+.cvc{
+    width: 70px;
+}
+.long{
+    width: 100%;
+}
+input[type="text"], input[type="month"]{
+    padding: 0.2rem;
+}
+#donation img{
+    width: 30%;
+    min-width: 350px;
+    height: auto;
+    object-fit: cover;
+}
+#join img{
+    width: 35%;
+    height: auto;
+    object-fit: contain;
+}
+.joinc{
+    justify-content: center;
+    gap: 6rem;
+    margin: 1.5rem;
+}
+.joinc form{
+    justify-content: space-between;
+    gap: 1rem;
+    width: 35%;
+}
+.joinc form input{
+    padding: 0.5rem;
+}
+.joinc form input:focus{
+    padding: 0.5rem;
+    outline: solid #86A5BB;
+}
+.paybtn{
+    border-radius: 5px;
+    background-color: #62B0FE; 
+    border: solid #1b1c1e 1px;
+    padding: 0.5rem;
+}
+.jbtn{
+    background-color: #A7BDCD;
+    display: block;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 12px 36px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+}
 /*responsive*/
 @media (max-width: 465px) {
     .links{
