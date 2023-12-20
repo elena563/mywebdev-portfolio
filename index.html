@@ -27,7 +27,6 @@
                             <a href="#contacts">Contacts</a>
                         </ul>
                     </div>
-                    <!--<input type="checkbox">-->
                     
                     <label class="ham" for="ham">
                         <input type="checkbox" id="ham" onclick="show()">
@@ -52,32 +51,40 @@
             </div>
         </main>
         <!--chi sono e cosa so fare-->
-        <div id="aboutme">
-            <img src="immagini/icons3.png" alt="languages and softwares">
-            <div><h2>Hi there! This is Elena</h2>
-            <div class="about-text"><p>I'm a junior <strong>front-end developer</strong> and I can help you digitalize your activity in a simple and creative way!</p>
-            <p>Born in 2003 in Italy, I am now studying <strong>Statistics and Information Management</strong> in Milan <br>and in the meanwhile I am taking training courses on the internet.</p></div>
-            <a target="_blank" class="btn orange" href="Elena_Zen_Resume_2.pdf">Download my CV</a>
+        <section id="aboutme">
+            <div>
+                <div>
+                    <h2>Hi there! This is Elena</h2>
+                    <div class="about-text">
+                        <p>I'm a junior <strong>front-end developer</strong> and I can help you digitalize your activity in a simple and creative way!</p>
+                        <p>Born in 2003 in Italy, I am now studying <strong>Statistics and Information Management</strong> in Milan <br>and in the meanwhile I am taking training courses on the internet.</p>
+                    </div>
+                    <a target="_blank" class="btn orange" href="Elena_Zen_Resume_2.pdf">Download my CV</a>
+                </div>
             
-            <div class="skills">
-                <h3>My Skills</h3>
-                <div class="about-text"><p>These are the programming languages and computer softwares I can handle:</p>
-                <ul>
-                    <li>HTML and CSS</li>
-                    <li>Javascript</li>
-                    <li>CSS framework Bootstrap</li>
-                    <li>Python and its libraries: Pandas and Matplotlib</li>
-                    <li>SAS basics</li>
-                    <li>Office Package (Excel, Word, Powerpoint)</li>
-                    <!--da imparare
-                    <li>Wordpress</li>
-                    <li>SQL e NoSQL</li>
-                    <li>R and RStudio</li>-->
-                </ul></div>
-            </div></div>
-        </div>
+                <div class="skills">
+                    <h3>My Skills</h3>
+                    <div class="about-text"><p>These are the programming languages and computer softwares I can handle:</p>
+                        <ul>
+                            <li>HTML and CSS</li>
+                            <li>CSS Bootstrap and SASS</li>
+                            <li>Javascript</li>
+                            <li>JS framework jQuery</li>
+                            <li>Python and its libraries: Pandas and Matplotlib</li>
+                            <li>SQL, SAS, R and SPSS basics</li>
+                            <li>Office Package (Excel, Word, Powerpoint)</li>
+                            <!--da imparare
+                            <li>Wordpress</li>
+                            <li>SQL e NoSQL</li>
+                            <li>R and RStudio</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <figure><img src="immagini/icons3.png" alt="languages and softwares"></figure>
+        </section>
         <!--cosa offro-->
-        <div id="services">
+        <section id="services">
             <h2 class="me">What I can provide you:</h2>
             <ul class="list">
                 <li><div class="product">
@@ -103,22 +110,22 @@
                 <p>Soon I will include data related services such as: Data Science, Data Analysis, Machine Learning, database with SQL and NoSQL! <br>
                 For any particular task or project, <a href="#contacts">contact me</a> and we'll discuss it together.</p>
             </div>
-        </div>
-        <!--il mio portfolio vero e proprio-->
-        <div id="projects">
+        </section>
+        <!--my projects portfolio-->
+        <section id="projects">
             <h2>My projects</h2>
             <ul>
                 <li><h3>Website Development</h3>
                     <div class="grid-container">
                         <div class="work">
-                            <img src="sneakers resell store/shot2.png" alt="">
+                            <img src="sneakers resell store/shot3.png" alt="">
                             <div class="text2">
                                 <h4>SB00 Reseller Store</h4>
                                 <p>Model of an e-commerce site for a sneakers and clothes reseller</p>
                             </div>
                             <div class="buttons">
                                 <a href="sneakers resell store/index.html" class="btn orange" target="_blank">View Project</a>
-                                <a href="" target="_blank" class="readme"><i class="fa-brands fa-readme fa-sm" style="color: #271b46;"></i> <span>README</span></a>
+                                <a href="sneakers resell store/README.md" target="_blank" class="readme"><i class="fa-brands fa-readme fa-sm" style="color: #271b46;"></i> <span>README</span></a>
                             </div>
                         </div>
                         <div class="work">
@@ -140,7 +147,7 @@
                             </div>
                             <div class="buttons">
                                 <a href="save the shark/index.html" class="btn orange" target="_blank">View Project</a>
-                                <a href="" target="_blank" class="readme"><i class="fa-brands fa-readme fa-sm" style="color: #271b46;"></i> <span>README</span></a>
+                                <a href="save the shark/README.md" target="_blank" class="readme"><i class="fa-brands fa-readme fa-sm" style="color: #271b46;"></i> <span>README</span></a>
                             </div>
                             <!--<div class="work">
                                 <img src="sneakers resell store/shot.png" alt="">
@@ -174,7 +181,7 @@
                 </li>-->  
             </ul>
             
-        </div>
+        </section>
 
         <!--contatti in footer-->
         <footer id="contacts">
@@ -183,10 +190,10 @@
                     <div class="form">
                         
                         <form action="#">
-                            <label for="name">Name</label> <br><input type="text" name="name" id="name" required> <br>
-                            <label for="email">Email</label> <br><input type="text" name="email" id="email" required>  <br>
-                            <label for="message">Your Message</label> <br><textarea rows="10" cols="50" name="message" id="message" required> </textarea> <br>
-                            <button onclick="submit()" class="btn violet">Submit</button>
+                            <label for="name">Name <br><input type="text" name="name" id="name" required></label>
+                            <label for="email">Email <br><input type="text" name="email" id="email" required> </label>
+                            <label for="message">Your Message <br><textarea rows="10" cols="50" name="message" id="message" required> </textarea></label>
+                            <button onclick="submit()" class="btn violet submit">Submit</button>
                         </form>
                     </div>
                     <div class="form">
@@ -201,42 +208,41 @@
                 <div class="foot">
                     
                     <div class="ftcont">
-                        <div>
-                            <div class="logo">
-                                <img src="immagini/new-logo.jpg" height="30">
-                                <h4>Elena Zen</h4>
-                            </div>
-                            <p>Junior Front-end Developer and Data Analyst</p>
-                        </div>
-                        <div id="phone">
-                            <div class="item">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <p>3807649511</p>
+                        <div class="ft-info">
+                            <div>
+                                <div class="logo">
+                                    <img src="immagini/new-logo.jpg" height="30">
+                                    <h4>Elena Zen</h4>
+                                </div>
+                                <p>Junior Front-end Developer and Data Analyst</p>
                             </div>
                             <div class="item">
-                                <ion-icon name="mail-outline"></ion-icon>
+                                <i class="fa-solid fa-envelope fa-lg" style="color: #f5f5fa;"></i>
                                 <p>elenazen365@gmail.com</p>
                             </div>
                         </div>
+                        <div id="phone">
+                            
+                        </div>
                         <div id="social">
-                            <div class="">
+                            <div class="icon-cont">
                                 <a href="https://github.com/elena563" target="_blank">
-                                    <iconify-icon icon="mdi:github" style="color: white;" width="32" height="32"></iconify-icon>
+                                    <i class="fa-brands fa-github fa-2xl social-icon"></i>
                                 </a>
                             </div>
-                            <div class="">
-                                <a href="" target="_blank">
-                                    <iconify-icon icon="mdi:linkedin" style="color: white;" width="32" height="32"></iconify-icon>
+                            <div class="icon-cont">
+                                <a href="https://it.fiverr.com/elena_zen?public_mode=true" target="_blank">
+                                    <iconify-icon icon="jam:fiverr-circle" width="40" height="40" class="social-icon"></iconify-icon>
                                 </a>
                             </div>
-                            <div class="">
-                                <a href="" target="_blank">
-                                    <iconify-icon icon="jam:fiverr-circle" style="color: white;" width="32" height="32"></iconify-icon>
+                            <div class="icon-cont">
+                                <a href="https://www.linkedin.com/in/elena-zen-771388294/" target="_blank">
+                                    <i class="fa-brands fa-linkedin-in fa-xl social-icon"></i>
                                 </a>
                             </div>
-                            <div class="">
-                                <a href="" target="_blank">
-                                    <iconify-icon icon="bxl:upwork" style="color: white;" width="32" height="32"></iconify-icon>
+                            <div class="icon-cont">
+                                <a href="https://www.freecodecamp.org/elena-zen" target="_blank">
+                                    <i class="fa-brands fa-free-code-camp fa-2xl social-icon" ></i>
                                 </a>
                             </div>
                         </div>

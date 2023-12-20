@@ -68,7 +68,9 @@ nav a{
     color:#FCFAFA;
     text-decoration: none;
 }
-
+#ham{
+    display:none;
+}
 /*main page*/
 body{
     background-color: #EDDBC0;
@@ -305,9 +307,15 @@ footer :is(h5, a){
 }
 iconify-icon{
     background-color: #FCFAFA;
+    color: #821d1d;
     padding: 0.3rem;
     margin: 0.1rem;
     border-radius: 100%;
+}
+iconify-icon:hover{
+    background-color: #821d1d;
+    color: #FCFAFA;
+    cursor: pointer;
 }
 .social{
     margin-top: 1rem;
@@ -513,6 +521,7 @@ h5, h4{
     .logo{
         z-index: 3;
     }
+    
     .ham{
         height:19.5px;
         width: 24px;
@@ -535,7 +544,7 @@ h5, h4{
         transform: rotate(0deg);
         transition: .25s ease-in-out;
       }
-    .ham input {
+    #ham {
       display: none;
     }
       #menucont.openmenu {

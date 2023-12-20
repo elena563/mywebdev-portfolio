@@ -2,7 +2,14 @@
 
 ## Project Description
 
-This website is designed to provide detailed information about the fictional Hotel Sogno in Maremma, located in the picturesque region of Tuscany, Italy. For this reason the original language is italian. Users can read about various services, explore the four type of rooms proposed and check booking availability. Room, number of people, dates and type of board can be selected and, depending on that, prices are automatically calculated through the site. The hotel represented doesn't exist, it's just a project website, every contact or location information is fictional for illustrative purposes only.
+This website is designed to provide detailed information about the fictional Hotel Sogno in Maremma, located in the picturesque region of Tuscany, Italy. For this reason the original language is italian. Users can read about various services, explore the four type of rooms proposed and check booking availability. Room, number of people, dates and type of board can be selected and, depending on that, prices are automatically calculated through the site. 
+The hotel represented doesn't exist, it's just a project website, every contact or location information is fictional for illustrative purposes only.
+
+Project sections
+- Header with responsive navigation menu
+- Homepage: hero section, booking section preview, services list and description
+- Rooms: accomodation and services options with price calculator
+- Footer with contacting info, social media icons and location map
 
 ## User Interface Preview
 
@@ -18,7 +25,7 @@ This website is designed to provide detailed information about the fictional Hot
 
 ## Project Features
 
-- **Responsive Design**: Ensures seamless experience across various devices.
+- **Responsive Design**: Ensures a seamless experience across various devices.
 - **Photo Gallery**: Captivating images showcasing the beauty of the hotel and its exclusive services.
 - **Room Information**: Animated section with details about four room types available.
 - **Booking section**: User interface of a detailed booking dashboard with a js costumized price calculator.

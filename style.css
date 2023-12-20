@@ -123,8 +123,12 @@ ul span{
     color:#271B46;
     padding: 3em;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
+}
+figure{
+    display: flex;
+    align-items: center;
 }
 .skills{
     list-style-position: inside;
@@ -140,7 +144,7 @@ ul span{
     background-color: #f5f5fa;
 }
 .par{
-    margin: 1em 0;
+    margin-top: 1em;
 }
 .par a{
     text-decoration: none;
@@ -154,7 +158,7 @@ ul span{
 .product{
     border: solid #271B46;
     padding: 2em;
-    margin: 0.5rem;
+    margin: 0.5rem 1rem 0.5rem 0;
     border-radius: 20px;
     width: 23em;
     color: #271B46;
@@ -168,13 +172,14 @@ ul span{
 }
 .grid-container{
     display: grid;
+    width: 100%;
     grid-template-columns: 30% 30% 30%;
     gap: 1em;
-    justify-content: center;
+    justify-content: space-between;
 }
 #projects{
     background-color: #f5d7db;
-    padding: 0.7em 0.7em 2em 0.7em;
+    padding: 3em;
     color: #271B46;
 }
 #projects ul{
@@ -192,16 +197,16 @@ ul span{
 }
 #projects h2, #projects h3{
     text-align: center;
-    margin: 1em;
+    margin-bottom: 1em;
     color:#271B46;
 }
 .readme{
     text-decoration: none;
-    padding: 8px 18px 8px 15px;
-    font-size: 0.8rem;
+    padding: 10px 30px;
+    font-size: 0.9rem;
     color:#271B46;
     border: solid #271B46 0.5px;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 .readme span:hover{
     text-decoration: underline;
@@ -218,12 +223,194 @@ ul span{
 .buttons > * {
     margin: 0;
   }
-@media (max-width: 600px) {
-    #aboutme, #projects{
-        padding: 1.5em;
+
+/*contacts and footer*/
+footer{
+    background-color:#5a4180;
+    color: #f5f5fa;
+}
+/*logo in footer*/
+.logo > h4{
+    position: relative;
+    top: 2px;
+    letter-spacing: 1px;
+}
+.formcont{
+    display: flex;
+    justify-content: space-around;
+}
+.form{
+    background-color: #f5f5fa;
+    padding: 3em;
+    width: 50%;
+    border: none;
+    color: #271B46;
+}
+form{
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+}
+.form h2{
+    padding-bottom: 0.3em;
+}
+.side{
+    padding: 15% 5% 15% 0;
+}
+input{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.3rem;
+    width: min(100%, 300px);
+    border: solid rgba(31, 27, 70, 0.3) 1px;
+    color: #271B46;
+}
+label{
+    width: min(100%, 300px);
+}
+:is(input, textarea):focus{
+    border: solid #7F5BEB 2px;
+    outline: none;
+}
+textarea{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.3rem;
+    width: 100%;
+    border: solid rgba(31, 27, 70, 0.3) 1px;
+}
+.foot{
+    padding: 3em 2.5em 2em 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.ftcont{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+}
+.ft-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+.item p, .item a{
+    display: inline-block;
+    color: #f5f5fa;
+    text-decoration: none;
+    padding: 0.5vw 1vw;
+    border-radius: 3px;
+}
+.item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 0.3em;
+}
+iconify-icon{
+    position: relative;
+    top: 2px;
+}
+#social{
+    display: flex;
+    align-items: center;
+}
+.icon-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin: 0.5rem;
+    height: 35px;
+    flex-basis: 25%;
+    width: 35px;
+}
+.icon-cont:hover{
+    background-color: #f5f5fa;
+}
+.social-icon{
+    color: #f5f5fa;
+    padding: 1rem;
+}
+.social-icon:hover{
+    color: #5a4180;
+}
+#cop{
+    padding: 0.5em 0 0.5em 0;
+    font-style: italic;
+    text-align: center;
+}
+.text2{
+    padding: 1em;
+}
+.submit{
+    width: max(40%, 150px);
+}
+/*super thin viewport*/
+@media (max-width: 300px) {
+    .container{
+        margin: 3.5em 7%;
+        padding: 6%;
     }
-    #aboutme img{
-        width: calc(100vw - 3em);
+    .text h4{
+        font-size: 1em;
+    }
+    .text h1{
+        font-size: 1.7em;
+    }
+    .navbar{
+        padding: 2em 1.5em;
+    }
+    .imm{
+        height:240px;
+        width: 240px;
+        float: none;
+        margin-left: -0.5em;
+        overflow: hidden;
+    }
+    .list{
+        flex-direction: column;
+    }
+    #aboutme, #services, .foot, #projects{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .form{
+        padding: 1em;
+    }
+    .product{
+        margin: 0.5rem 0;
+        max-width: 100%;
+    }
+    .submit{
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    .product{
+        padding: 1em;
+    }
+}
+@media (min-width: 301px) and (max-width: 600px) {
+    #aboutme, #projects, #services{
+        padding: 2em;
+    }
+    .foot{
+        padding: 2em;
+    }
+    .form{
+        padding: 0 2em;
+    }
+    .product{
+        max-width: 75vw;
+    }
+}
+@media (max-width: 600px) {
+    .grid-container{
+        display: flex;
+        flex-direction: column;
     }
     .container{
         flex-direction: column;
@@ -238,15 +425,35 @@ ul span{
     .text h4{
         font-size: 1.1em;
     }
-    .product{
-        max-width: 75vw;
-        margin-right: 0.1em;
+    .ftcont{
+        flex-direction: column;
+    }
+    .side{
+        padding-bottom: 2em;
+    }
+    form{
+      padding: 0 0 2em 0;
+    }
+    .form{
+        width: 100%
+    }
+    .formcont{
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    figure{
+        justify-content: center;
+        margin-top: 1em;
+    }
+    #aboutme img{
+        width: calc(100vw - 3em);
+        max-width: 350px;
     }
     #aboutme{
         flex-direction: column;
     }
-}
-@media (max-width: 700px) {
     .ham{
         display: block;
         height: 26px;
@@ -262,7 +469,7 @@ ul span{
         justify-content: space-between;
     }
       
-    .ham input {
+    #ham {
         display: none;
       }
       
@@ -323,136 +530,8 @@ ul span{
         left: 5px;
     }
 }
-/*super thin viewport*/
-@media (max-width: 300px) {
-    .container{
-        margin: 3.5em 7%;
-        padding: 6%;
-    }
-    .text h4{
-        font-size: 1em;
-    }
-    .text h1{
-        font-size: 1.7em;
-    }
-    .navbar{
-        padding: 2em 1.5em;
-    }
-    #aboutme{
-        padding: 2em;
-    }
-    .imm{
-        height:240px;
-        width: 240px;
-        float: none;
-        margin-left: -0.5em;
-        overflow: hidden;
-    }
-}
-/*contacts and footer*/
-footer{
-    background-color:#5a4180;
-    color: #f5f5fa;
-}
-/*logo in footer*/
-.logo > h4{
-    position: relative;
-    top: 2px;
-    letter-spacing: 1px;
-}
-.formcont{
-    display: flex;
-    justify-content: space-around;
-}
-.form{
-    background-color: #f5f5fa;
-    padding: 3em 3em;
-    width: 50%;
-    border: none;
-    color: #271B46;
-}
-form{
-    padding: 0 15%;
-}
-.form h2{
-    padding-bottom: 0.3em;
-}
-.side{
-    padding: 15% 5% 15% 0;
-}
-input{
-    margin-bottom: 0.5em;
-    height: 2em;
-    width: 100%;
-    border: solid rgba(31, 27, 70, 0.3) 1px;
-    color: #271B46;
-}
-:is(input, textarea):focus{
-    border: solid #7F5BEB 2px;
-    outline:none;
-}
-textarea{
-    width: 100%;
-    border: solid rgba(31, 27, 70, 0.3) 1px;
-}
-.foot{
-    padding: 2em 2em 1em 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-.ftcont{
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5em;
-}
-@media (max-width: 600px) {
-    .ftcont{
-        flex-direction: column;
-    }
-    .foot{
-        padding: 1.7em;
-    }
-    textarea{
-        max-width: 90%;
-    }
-    .form{
-        padding: 2em;
-    }
-}
-.item p, .item a, #social a{
-    display: inline-block;
-    color: #f5f5fa;
-    text-decoration: none;
-    padding: 0.5vw 1vw;
-    border-radius: 3px;
-}
-.item{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-top: 0.3em;
-}
-ion-icon{
-    font-size: 24px;
-}
-iconify-icon:hover{
-    background-color: #664992;
-}
-#social{
-    display: flex;
-}
-#cop{
-    padding: 0.5em 0 0.5em 0;
-    font-style: italic;
-    text-align: center;
-}
-@media (max-width: 600px) {
+@media (min-width: 601px) and (max-width: 800px) {
     .grid-container{
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 48% 48%;
     }
-}
-.text2{
-    padding: 1em;
 }

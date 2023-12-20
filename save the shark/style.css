@@ -182,12 +182,13 @@ footer{
     cursor: pointer;
 }
 iconify-icon{
-margin-top: 1rem;
-border-radius: 3px;
+    margin-top: 1rem;
+    border-radius: 3px;
 }
 iconify-icon:hover{
-color: #62B0FE;
-background-color: #24337D;
+    cursor: pointer;
+    background-color: #f5f5fa;
+    transform: scale(1.5);
 }
 /*discover*/
 .flex{

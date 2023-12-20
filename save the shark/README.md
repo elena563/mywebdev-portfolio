@@ -5,6 +5,14 @@
 This website is designed for the fictional no profit organization Save the Shark, dedicated to the preservation of the sea and its inhabitants, with a particular attention for sharks. Users can read about the association, its mission, goals and story, explore the charity merchandising and join the community with a form. In the "discover" section, many species of shark are shortly descripted and represented, in order to inform about an animal that is often poorly known. 
 Save the Shark is a fictional association, this project website is not linked to any real one, every contact or specific information is fictional for illustrative purposes only.
 
+Project sections:
+- Header with responsive navigation menu
+- Homepage (index): Hero section, about us section
+- Merch: charity merchandising store
+- Donate: donation gateway, join us contacting form
+- Discover: shark species informative section
+- Footer with contacting information and social media icons
+
 ## User Interface Preview
 
 1. Explore the user interface online by visiting the [Save the Shark website](insert-your-site-link).
