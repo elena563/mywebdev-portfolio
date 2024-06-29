@@ -55,24 +55,46 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//price generator
-function getprice() {
-    let people = adults + kids;
-    let price = 0;
-    let rooms = [69, 85, 102, 120]
-for (el of rooms) {
-    price += (price*(10/100))*(adults-1)    /*increase for every added adult*/
-    price += (price*(5/100))*kids           /*increase for every kid*/
-    price += (price*(10/100))*season        /*low, medium, high season*/  
-    price += (price*(10/100))*board        /*b&b, half, full board*/  
-    if (people >= 2){
-        rooms.pop()         /*jacuzzi room only for two people*/
-    }
-}   return rooms
+const selected = {
+    adults : parseInt(document.querySelector('.adults').value),
+    kids : parseInt(document.querySelector('.kids').value),
+    season : optionConverter(document.querySelector('.season').value),
+    board : optionConverter(document.querySelector('.board').value),
+    nRooms : parseInt(document.querySelector('.rooms').value)
 }
 
-function optionConverter(string) {  /*stringa -> numero*/
-    switch (parola) {
+//price generator
+function displayMessage(message) {
+    $("#messageContainer").html(message);
+}
+function getprice() {
+    let people = selected.adults + selected.kids;
+    let roomRates = {
+        economy: 69,
+        comfort: 85,
+        deluxe: 102,
+        jacuzzi: 120
+    };
+    let prices = [];
+    let guestsPerRoomRatio = people / selected.nRooms;
+    let maxGuestsPerRoomRatio = 4;
+    if (guestsPerRoomRatio > maxGuestsPerRoomRatio) {
+            displayMessage("Il numero di ospiti per stanza è troppo elevato. Considera di aggiungere stanze o ridurre il numero di ospiti per stanza.");
+            return prices;
+    }
+    for (let el in roomRates) {
+        if (people > 2 && el === 'jacuzzi') continue;     /*jacuzzi room only for two people*/
+        let selectedRoom = roomRates[el];
+        let price = selectedRoom += (selectedRoom*(10/100))*(selected.adults-1)    /*increase for every added adult*/
+        + (selectedRoom*(5/100))*selected.kids           /*increase for every kid*/
+        + (selectedRoom*(10/100))*selected.season        /*low, medium, high season*/  
+        + (selectedRoom*(10/100))*selected.board         /*b&b, half, full board*/  
+        prices.push(price.toFixed(2));
+    }   return prices
+}
+
+function optionConverter(string) {  /*string -> number*/
+    switch (string) {
         case 'Bassa':
         case 'B&B':
             return 1;
@@ -84,11 +106,16 @@ function optionConverter(string) {  /*stringa -> numero*/
     }
 }
 
-const adults = document.querySelector('.adults').value;
-const kids = document.querySelector('.kids').value;
-const season = optionConverter(document.querySelector('.season').value);
-const board = optionConverter(document.querySelector('.board').value);
-let nRooms = document.querySelector('.rooms').value;;
+function displayPrice(prices) {
+    const priceCont = $("#priceContainer");
+    priceCont.empty();
+    
+    // Aggiunge il prezzo di ogni tipo di stanza al contenuto dell'elemento <p>
+    prices.forEach(room => {
+        priceCont.append(`<p>${room.el}: ${room.price.toFixed(2)} €</p>`);
+    });
+}
+
 
 
 

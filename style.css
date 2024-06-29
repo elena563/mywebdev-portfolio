@@ -10,10 +10,12 @@ body{
 @font-face {
 	font-family: 'Roboto';
 	src: local('roboto'), url('Roboto-Regular.ttf') format('truetype');
+    font-display: swap;
 	}
 @font-face {
 	font-family: 'Coolvetica';
 	src: local('Coolvetica'), url('Coolvetica.ttf') format('truetype');
+    font-display: swap;
 	}
 h1, h2, h3, h4{
     font-family: "Coolvetica", sans-serif;
@@ -49,11 +51,11 @@ nav {
     flex: 1;
     text-align: right;
  }
+ /*logo in navbar*/
 .logo{
     display: flex;
     letter-spacing: 2px;
 }
-/*logo in navbar*/
 .logo > h2{
     position: relative;
     top: 7.5px;
@@ -94,7 +96,6 @@ ul span{
 }
 .container{
     display: flex;
-    /*background-color: #B8A6ED;*/
     background-color: #c4a6ed;
     margin: 3.5em 9% 3.5em 9%;
     padding: 5%;
@@ -195,7 +196,7 @@ figure{
 .work img{
     width: 100%;
 }
-#projects h2, #projects h3{
+#projects :is(h2, h3){
     text-align: center;
     margin-bottom: 1em;
     color:#271B46;
@@ -296,7 +297,7 @@ textarea{
     justify-content: space-between;
     gap: 1em;
 }
-.item p, .item a{
+.item :is(p, a){
     display: inline-block;
     color: #f5f5fa;
     text-decoration: none;
@@ -503,7 +504,7 @@ iconify-icon{
         transition: max-height 0.5s ease, opacity 0.5s ease;
     }
     #menucont.open {
-        max-height: 400px; /* o qualsiasi altezza massima desideri */
+        max-height: 400px;
         opacity: 1;
     }
     .line1{

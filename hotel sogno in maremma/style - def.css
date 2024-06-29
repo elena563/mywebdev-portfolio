@@ -8,6 +8,7 @@
  @font-face {
 	font-family: 'Playfair Display';
 	src: local('playfair'), url('PlayfairDisplay-Regular.ttf') format('truetype');
+    font-display: swap;
 	}
 /*header*/
  header{
@@ -29,7 +30,7 @@
     background-position: center top;
     width: 100%;
  }
- h1{
+h1{
     color: #8C5B26;
     font-family: 'Courgette', cursive;
     font-size: 1.7em;
@@ -37,12 +38,12 @@
     font-style: italic;
     word-spacing: 0.03rem;
     margin: 1em;
- }
- h1 span{
+}
+h1 span{
     letter-spacing: 0.5rem;
     font-size: 2rem;
     padding: 0.3em;
- }
+}
  h2{
     text-align: center;
     padding: 15%;
@@ -62,7 +63,6 @@ nav ul li{
 nav{
     text-align: center;
     flex-grow: 1;
-   
 }
 nav a{
     color:#FCFAFA;
@@ -170,32 +170,6 @@ main p{
     font-size: 1.4rem;
     padding-bottom: 1rem;
 }
-@media screen and (max-width: 800px){
-    .service{
-        flex-direction: column;
-        gap: 1em;
-        margin-top: 3em;
-    }
-    .service img {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: 14em;
-        object-fit: cover;
-    }
-    .cover{
-        height: 12em;
-    }
-    .pserv{
-        text-align: left;
-    }
-    .topimg{
-        object-position: 50% 0%;
-    }
-    .topimg2{
-        object-position: 50% 30%;
-    }
-}
 /*booking form*/
 .formprenotazione{
     margin: 1em 3em 2em 3em;
@@ -273,6 +247,27 @@ select{
 }
 .flex-cont{
     display: flex;
+    flex-wrap: nowrap;
+}
+.grower{
+    flex-grow: 1;
+}
+.bigger{
+    flex-basis: 50%;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.windows{
+    flex-basis: 70%;
+}
+.flex-form{
+    justify-content: center;
+}
+#priceCont{
+    flex-basis: 50%;
+    text-align: center;
 }
 /*footer*/
 footer{
@@ -319,62 +314,7 @@ iconify-icon:hover{
 }
 .social{
     margin-top: 1rem;
-}
-@media screen and (max-width: 850px) {
-    #ftcontainer{
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 600px) {
-    .subcont{
-        flex-direction: column;
-        align-items: center;
-    }
-    .foot{
-        text-align: center;
-    }
-}
-/*mobile format titles*/
-@media screen and (max-width: 700px){
-    h1{
-        font-size: 4vw;
-    }
-    h1 span{
-        font-size: 5vw;
-        letter-spacing: 1vw;
-    }
-    h2{
-        padding-top: 25%;
-        padding-bottom: 25%;
-        font-size: 3rem;
-    }
-    .formprenotazione{
-        margin: 1em 2em 2em 2em;
-    }
-}
-/*some little screen adjustments*/
-@media screen and (max-width: 600px){
-    .formprenotazione{
-        flex-direction: column;
-        gap: 1em;
-        align-items: center;
-    }
-    .grid-container{
-        display: flex;
-        overflow-x: scroll;
-        align-items: center;
-        height: 90vh;
-    }
-    #chisiamo, .formprenotazione{
-        margin: 1.5em;
-    }
-    #chisiamo, #services{
-        margin: 3em 1.5em 1em 1.5em;
-    }
-    #services{
-        margin: 1em 1.5em;
-    }
-}     
+} 
 /*rooms page*/    
 .rooms-section{
     box-shadow: 0px 0px 8px 2px #8C5B26;
@@ -448,8 +388,10 @@ h5, h4{
 }
 .r-text{
     display: flex;
-    gap: 1em;
+    gap: 2em;
     flex-grow: 2;
+    background-color: #FCFAFA;
+    margin: 2em 0 0 0;
 }
 .r-images{
     display: flex;
@@ -471,7 +413,6 @@ h5, h4{
 }
 .amenities{
     font-size: 0.8rem; 
-    padding-bottom: 0.2rem;
 }
 .flex-am{
     flex-grow: 1;
@@ -491,6 +432,11 @@ h5, h4{
 }
 .small{
     width: 80%;
+    padding: 8px 16px;
+    align-self: flex-end;
+}
+.tiny{
+    width: 50%;
     padding: 8px 16px;
     align-self: flex-end;
 }
@@ -575,6 +521,37 @@ h5, h4{
           left: 5px;
       }
 }
+@media screen and (max-width: 850px) {
+    #ftcontainer{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 800px){
+    .service{
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 3em;
+    }
+    .service img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 14em;
+        object-fit: cover;
+    }
+    .cover{
+        height: 12em;
+    }
+    .pserv{
+        text-align: left;
+    }
+    .topimg{
+        object-position: 50% 0%;
+    }
+    .topimg2{
+        object-position: 50% 30%;
+    }
+}
 @media (max-width: 700px){
     .room_gallery{
         flex-direction: column;
@@ -584,6 +561,50 @@ h5, h4{
     }
     .r-images{
         overflow-x: scroll;
+    }
+    h1{
+        font-size: 4vw;
+    }
+    h1 span{
+        font-size: 5vw;
+        letter-spacing: 1vw;
+    }
+    h2{
+        padding-top: 25%;
+        padding-bottom: 25%;
+        font-size: 3rem;
+    }
+    .formprenotazione{
+        margin: 1em 2em 2em 2em;
+    }
+}
+@media screen and (max-width: 600px){
+    .formprenotazione{
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+    }
+    .grid-container{
+        display: flex;
+        overflow-x: scroll;
+        align-items: center;
+        height: 90vh;
+    }
+    #chisiamo, .formprenotazione{
+        margin: 1.5em;
+    }
+    #chisiamo, #services{
+        margin: 3em 1.5em 1em 1.5em;
+    }
+    #services{
+        margin: 1em 1.5em;
+    }
+    .subcont{
+        flex-direction: column;
+        align-items: center;
+    }
+    .foot{
+        text-align: center;
     }
 }
 @media (max-width: 500px){

@@ -198,11 +198,10 @@ iconify-icon:hover{
 main{
     flex:2;
 }
-
-section ul{
+.shark-culture section ul{
     list-style-position: inside;
 }
-section{
+.shark-culture section{
     margin-top: 2rem;
 }
 #list a{
@@ -340,7 +339,7 @@ h4{
     gap: 0.5rem;
     justify-content: space-between;
 }
-#card-data fieldset, #personal-data fieldset{
+:is(#card-data, #personal-data) fieldset{
     flex-basis: 50%;
 }
 #gateway{
