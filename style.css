@@ -42,6 +42,9 @@ header a{
 header :is(a, ul span):hover{
     background-color: #664992;
 }
+#contact{
+    color:#7F5BEB;
+}
 .navbar {
     display: flex;
     align-items: center;
@@ -150,6 +153,7 @@ figure{
 .par a{
     text-decoration: none;
 }
+
 .list{
     display: flex;
     justify-content: flex-start;
@@ -161,8 +165,49 @@ figure{
     padding: 2em;
     margin: 0.5rem 1rem 0.5rem 0;
     border-radius: 20px;
-    width: 23em;
+    width: 95%;
     color: #271B46;
+    list-style-type: none;
+}
+
+@media (min-width: 701px) {
+    .swiper-slide {
+        width: 33% !important;
+      }
+      .swiper-button-next, .swiper-button-prev {
+        display: none !important;
+      }
+  }
+@media (max-width: 700px) {
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23em;
+  }
+  :root {
+    --swiper-navigation-color: #271B46;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size)/ 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+}
+.swiper-button-next:active, .swiper-button-prev:active {
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+}
 }
 .product > h4, .space{
     margin-top: 5px;
@@ -382,7 +427,7 @@ iconify-icon{
         padding: 1em;
     }
     .product{
-        margin: 0.5rem 0;
+        margin: 0.5rem;
         max-width: 100%;
     }
     .submit{
@@ -396,13 +441,13 @@ iconify-icon{
 }
 @media (min-width: 301px) and (max-width: 600px) {
     #aboutme, #projects, #services{
-        padding: 2em;
+        padding: 2em 1.5em;
     }
     .foot{
-        padding: 2em;
+        padding: 2em 1.5em;
     }
     .form{
-        padding: 0 2em;
+        padding: 0 1.5em;
     }
     .product{
         max-width: 75vw;
@@ -444,6 +489,12 @@ iconify-icon{
     }
 }
 @media (max-width: 700px) {
+    .list{
+         overflow-x:visible;
+    }
+    .product{
+        margin: 0.5rem 1rem 0.5rem 1.5rem;
+    }
     figure{
         justify-content: center;
         margin-top: 1em;

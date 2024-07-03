@@ -12,7 +12,7 @@ Portfolio sections:
 
 ## User Interface Preview
 
-Explore the user interface online by visiting the [Elena's Portfolio](insert-your-site-link).
+Explore the user interface online by visiting the [Elena's Portfolio](https://elenazen.it/).
 
 ## Code Exploration on GitHub
 

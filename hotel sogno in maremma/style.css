@@ -8,6 +8,7 @@
  @font-face {
 	font-family: 'Playfair Display';
 	src: local('playfair'), url('PlayfairDisplay-Regular.ttf') format('truetype');
+    font-display: swap;
 	}
 /*header*/
  header{

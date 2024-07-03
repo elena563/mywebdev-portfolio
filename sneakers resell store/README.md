@@ -14,7 +14,7 @@ Project sections:
 
 ## User Interface Preview
 
-1. Explore the user interface online by visiting the [SB00 Sneakers Resell Store website](insert-your-site-link).
+1. Explore the user interface online by clicking on the related button in the portfolio section of [my personal website](https://elenazen.it/).
 2. Navigate through different sections of the site to experience its implemented features.
 
 ## Code Exploration on GitHub

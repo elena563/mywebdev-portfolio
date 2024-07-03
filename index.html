@@ -8,20 +8,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="immagini/fav2.png">
         <link rel= "stylesheet" href= "style.css">
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
         <header>
             <div class="navbar">
                 <div class="logo">
                     <!--logo and name-->
-                    <img src="immagini/new-logo.jpg" alt="elena-zen-logo" height="50">
+                    <img src="immagini/left-cropped-logo.jpg" alt="elena-zen-logo" height="50em">
                     <h2>Elena Zen</h2>
                 </div>
                 <nav>
                     <!--navbar-->
                     <div id="menucont">
                         <ul id="menu">
-                            <a href="zen-elena-portfolio.html">Home</a>
+                            <a href="index.html">Home</a>
                             <span style="word-spacing: normal;"><a href="#aboutme">About me</a></span>
                             <a href="#services">Services</a>
                             <a href="#projects">Projects</a>
@@ -46,9 +52,9 @@
                         <h1>Elena Zen</h1>
                         <h4>Junior Front-end Developer</h4>
                     </div>
-                    <a target="_blank" rel="noopener noreferrer" class="btn violet">Contact me</a>
+                    <a href="#contacts" target="_blank" rel="noopener noreferrer" class="btn violet">Contact me</a>
                 </div>
-                <img src="immagini/img4.png" alt="Elena web developer" height="230em">
+                <img src="immagini/img4.webp" alt="Elena web developer" height="230em">
             </div>
         </main>
         <!--who I am and what I can do-->
@@ -60,7 +66,7 @@
                         <p>I'm a junior <strong>front-end developer</strong> and I can help you digitalize your activity in a simple and creative way!</p>
                         <p>Born in Italy, I am now studying <strong>Statistics and Information Management</strong> in Milan <br>and in the meanwhile I am taking training courses on the internet.</p>
                     </div>
-                    <a target="_blank" class="btn orange" href="Elena_Zen_Resume_2.pdf">Download my CV</a>
+                    <a target="_blank" class="btn orange" href="Elena_Zen_Resume_3.pdf">Download my CV</a>
                 </div>
             
                 <div class="skills">
@@ -71,6 +77,7 @@
                             <li>CSS Bootstrap and SASS</li>
                             <li>Javascript</li>
                             <li>JS framework jQuery</li>
+                            <li>Wordpress and Shopify</li>
                             <li>Python and its libraries: Pandas and Matplotlib</li>
                             <li>SAS, R and SPSS basics</li>
                             <li>Database Management with SQLite, MongoDB</li>
@@ -88,29 +95,33 @@
         <!--what I offer-->
         <section id="services">
             <h2 class="me">What I can provide you:</h2>
-            <ul class="list">
-                <li><div class="product">
-                    <img class="icon" src="immagini/vioa-removebg.png" alt="website development" width="60em">
-                    <h4>Custom Website Development: <br> Bring Your Vision Online</h4> 
-                    <p class="space">Do you have a unique idea <br>you want to turn into a <strong>digital reality</strong>?</p> 
-                    <p>I create custom websites from scratch, from the design phase all the way to implementation. Your website will reflect your brand and offer a user-friendly experience.</p>
-                </div></li>
-                <li><div class="product">
-                    <img class="icon" src="immagini/viob-removebg.png" alt="website optimisation" width="60em">
-                    <h4>Upgrade and Enhance Your Site: <br> Optimal Performance on All Devices</h4> 
-                    <p class="space">Do you already have a website <br> but feel it <strong>could do more</strong>?</p> 
-                    <p>I assess your existing site and optimize it for superior results. Not only will I make it more appealing and accessible, but I'll also adapt it for a seamless user experience on mobile devices.</p>
-                </div></li>
-                <li><div class="product">
-                    <img class="icon" src="immagini/vioc-removebg.png" alt="Python scripts" width="78em">
-                    <h4>Python Script Development: <br> Simplified Solutions for Your Needs</h4>
-                    <p class="space">Struggling with complex <strong>data management</strong>?</p>
-                    <p>From data cleaning to visualization, through Python, powered by Pandas and Matplotlib, I turn your data into insights, enhancing your decision-making process.</p>
-                </div></li>
-            </ul>
+            <div class="swiper mySwiper">
+                <ul class="list swiper-wrapper">
+                    <li class="swiper-slide"><div class="product">
+                        <img class="icon" src="immagini/vioa-removebg.png" alt="website development" width="60em">
+                        <h4>Custom Website Development: <br> Bring Your Vision Online</h4> 
+                        <p class="space">Do you have a unique idea <br>you want to turn into a <strong>digital reality</strong>?</p> 
+                        <p>I create custom websites from scratch, from the design phase all the way to implementation. Your website will reflect your brand and offer a user-friendly experience.</p>
+                    </div></li>
+                    <li class="swiper-slide"><div class="product">
+                        <img class="icon" src="immagini/viob-removebg.png" alt="website optimisation" width="60em">
+                        <h4>Upgrade and Enhance Your Site: <br> Optimal Performance on All Devices</h4> 
+                        <p class="space">Do you already have a website <br> but feel it <strong>could do more</strong>?</p> 
+                        <p>I assess your existing site and optimize it for superior results. Not only will I make it more appealing and accessible, but I'll also adapt it for a seamless user experience on mobile devices.</p>
+                    </div></li>
+                    <li class="swiper-slide"><div class="product">
+                        <img class="icon" src="immagini/vioc-removebg.png" alt="Python scripts" width="78em">
+                        <h4>Python Script Development: <br> Simplified Solutions for Your Needs</h4>
+                        <p class="space">Struggling with complex <strong>data management</strong>?</p>
+                        <p>From data cleaning to visualization, through Python, powered by Pandas and Matplotlib, I turn your data into insights, enhancing your decision-making process.</p>
+                    </div></li>
+                </ul>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
             <div class="par">
                 <p>Soon I will include data related services such as: Data Science, Data Analysis, Machine Learning, database with SQL and NoSQL! <br>
-                For any particular task or project, <a href="#contacts">contact me</a> and we'll discuss it together.</p>
+                For any particular task or project, <a href="#contacts" id="contact">contact me</a> and we'll discuss it together.</p>
             </div>
         </section>
         <!--my projects portfolio-->
@@ -209,7 +220,7 @@
                         <div class="ft-info">
                             <div>
                                 <div class="logo">
-                                    <img src="immagini/new-logo.jpg" alt="elena-zen-logo" height="30">
+                                    <img src="immagini/left-cropped-logo.jpg" alt="elena-zen-logo" height="30em">
                                     <h4>Elena Zen</h4>
                                 </div>
                                 <p>Junior Front-end Developer and Data Analyst</p>
@@ -244,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            <p id="cop">© Elena Zen All Rights Reserved</p>
+            <p id="cop">© 2024 Elena Zen All Rights Reserved</p>
         </footer>
         <script src="https://kit.fontawesome.com/cc3bfee917.js" crossorigin="anonymous"></script>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>

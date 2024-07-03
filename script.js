@@ -21,6 +21,14 @@ function show() {
     }
 }
 
+var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
     const roomOptions = document.querySelectorAll('.room-option');
     const roomGalleries = document.querySelectorAll('.room_gallery');
 
