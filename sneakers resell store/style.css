@@ -44,6 +44,7 @@ h1{
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255);
+    padding: 0 1.5em;
   }
   .home{
     background-image: url(immagini/nike.jpg);
@@ -115,7 +116,7 @@ footer{
     display: flex;
     justify-content: space-between;
     margin: 2em;
-    gap: 1em;
+    gap: 1.5em;
   }
   footer p{
     font-style: italic;
@@ -126,7 +127,7 @@ footer{
     flex-grow: 0.5;
   }
   .foot{
-    width: 15%;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -161,15 +162,22 @@ footer{
   .tik:hover{
     background-color: black;
   }
-  .foot a{
+  .foot a, .inner a{
     color: white;
     text-decoration: none;
   }
-  .foot a:hover{
+  .foot a:hover, .inner a:hover{
     text-decoration: underline;
+  }
+  .inner img{
+    position: relative;
+    top: 7px;
   }
   form{
     width: 100%;
+  }
+  .form{
+    max-width: 250px;
   }
   form input{
     display: inline-block;
@@ -237,11 +245,15 @@ footer{
   height: 500px;
 }
 .prodimg{
-  padding: 5em 1.5em 5em 1.5em;
+  
   background-color: #e5e6e8;
-  height: 5em;
+  height: 14em;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .tall{
   padding: 1em 1.5em 9em 1.5em;
 }
@@ -324,7 +336,7 @@ footer{
   }
   .container2{
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
     gap: 1em;
   }
 @media (max-width: 860px) {
@@ -415,13 +427,38 @@ footer{
       left: 5px;
   }
 }
-@media (max-width: 550px) {
+.links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1em;
+}
+.linksbox{
+  min-width: 150px;
+}
+@media (max-width: 950px) and (min-width: 750px) {
+  .links{
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .links{
+    flex-direction: column;
+  }
+}
+@media (max-width: 750px) {
   #ftcontainer{
     flex-direction: column;
     padding: 0 2em;
   }
   .foot{
     width: 100%;
+  }
+  iconify-icon{
+    flex-basis: 5%;
+  }
+  .social{
+    justify-content: center;
   }
 }
 @media (max-width: 500px) {
@@ -445,4 +482,20 @@ footer{
       transform-origin: top center;
     }
   }
+@media (max-width: 450px) {
+  .logo img{
+    width: 150px;
+  }
+  .navbar{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .white, .inner{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .sep{
+    height: 250px;
+  } 
+}
   

@@ -20,6 +20,9 @@ body{
 h1, h2, h3, h4{
     font-family: "Coolvetica", sans-serif;
 }
+h2, h3, h4{
+    letter-spacing: 0.7px;
+}
 h2{
     font-size: 190%;
 }
@@ -43,7 +46,9 @@ header :is(a, ul span):hover{
     background-color: #664992;
 }
 #contact{
-    color:#7F5BEB;
+    color: #271B46;
+    text-decoration: underline;
+    text-decoration-color: #7F5BEB;
 }
 .navbar {
     display: flex;
@@ -295,6 +300,7 @@ footer{
 form{
     padding: 0;
     display: flex;
+    width: 100%;
     gap: 0.5rem;
     flex-direction: column;
     align-items: center;
@@ -308,12 +314,12 @@ form{
 input{
     font-family: 'Roboto', sans-serif;
     padding: 0.3rem;
-    width: min(100%, 300px);
+    width: min(100%, 350px);
     border: solid rgba(31, 27, 70, 0.3) 1px;
     color: #271B46;
 }
 label{
-    width: min(100%, 300px);
+    width: min(100%, 350px);
 }
 :is(input, textarea):focus{
     border: solid #7F5BEB 2px;
@@ -362,6 +368,7 @@ iconify-icon{
 #social{
     display: flex;
     align-items: center;
+    max-width: 200px;
 }
 .icon-cont{
     display: flex;

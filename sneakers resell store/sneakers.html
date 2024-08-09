@@ -28,9 +28,16 @@
                             dovranno avere un filtro per marca e prezzo-->
                         </ul>
                     </nav>
-                    <a href=""><img src="immagini/heart-thin-icon.png" alt="profile" height="25em" class="icon"></a>
-                    <a href=""><img src="immagini/cart-black-icon.png" alt="cart" height="25em" class="icon"></a>
-                    <!--<img src="https://i.ibb.co/6XbqwjD/menu.png" alt="menu" class="menu" onclick="menutoggle()">-->
+                    <div class="header-icons">
+                        <a href="#" class="icon"><i class="fa-regular fa-heart fa-xl" style="color: #1b1c1e;"></i></a>
+                        <a href="#" class="icon"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #1b1c1e;"></i></a>
+                        <label class="ham icon" for="ham">
+                            <input type="checkbox" id="ham" onclick=show()>
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </label>
+                    </div>
                 </div>
                 <div class="snk">
                     <h1>Sneakers</h1>
@@ -66,19 +73,89 @@
                 </div>
             </div>
             <div class="cont container2">
-                <a href="#"><div class="product">
+                <a href="#"><div class="product man woman medium nike">
                     <div class="prodimg">
-                        <img src="scarpe/cap.png" alt="cap" width="150em" > <br>
+                        <img src="scarpe/airforcelow.png" alt="airforce" width="170em" > <br>
                     </div>
-                    <p>Nike baseball cap</p>
-                    <p>$25.00</p>
+                    <p>Nike Air Force 1</p>
+                    <p>$100.00</p>
                 </div></a>
-                <a href="#"><div class="product">
-                    <div class="prodimg tall">
-                        <img src="streetwear/jacket.png" alt="jacket" width="150em" > <br>
+                <a href="#"><div class="product man exp nike">
+                    <div class="prodimg">
+                        <img src="scarpe/airmax90.png" alt="airmax" width="170em" > <br>
                     </div>
-                    <p>Nike White Jacket</p>
-                    <p>$75.00</p>
+                    <p>Nike Air Max 90</p>
+                    <p>$120.00</p>
+                </div></a>
+                <a href="#"><div class="product man woman medium nike">
+                    <div class="prodimg">
+                        <img src="scarpe/dunklow1.png" alt="dunklow" width="170em" > <br>
+                    </div>
+                    <p>Nike Dunk Low</p>
+                    <p>$100.00</p>
+                </div></a>
+                <a href="#"><div class="product man exp nike">
+                    <div class="prodimg">
+                        <img src="scarpe/jordanhigh2.png" alt="jordanhigh" width="170em" > <br>
+                    </div>
+                    <p>Air Jordan 1 High</p>
+                    <p>$170.00</p>
+                </div></a>
+                <a href="#"><div class="product woman exp adidas">
+                    <div class="prodimg">
+                        <img src="scarpe/superstar.png" alt="superstar" width="170em" > <br>
+                    </div>
+                    <p>Adidas Superstar</p>
+                    <p>$115.00</p>
+                </div></a>
+                <a href="#"><div class="product man exp nike">
+                    <div class="prodimg">
+                        <img src="scarpe/airmax270.png" alt="airmax" width="170em" > <br>
+                    </div>
+                    <p>Nike Air Max 270</p>
+                    <p>$120.00</p>
+                </div></a>
+                <a href="#"><div class="product man exp nike">
+                    <div class="prodimg">
+                        <img src="scarpe/airmax720.png" alt="airmax" width="170em" > <br>
+                    </div>
+                    <p>Nike Air Max 720</p>
+                    <p>$110.00</p>
+                </div></a>
+                <a href="#"><div class="product man woman exp adidas">
+                    <div class="prodimg">
+                        <img src="scarpe/yeezyboost350.png" alt="yeezy" width="170em" > <br>
+                    </div>
+                    <p>Adidas Yeezy Boost 350</p>
+                    <p>$115.00</p>
+                </div></a>
+                <a href="#"><div class="product man medium nike">
+                    <div class="prodimg">
+                        <img src="scarpe/airzoompegasus34.png" alt="airzoompegasus" width="170em" > <br>
+                    </div>
+                    <p>Nike Air Zoom Pegasus 34</p>
+                    <p>$65.00</p>
+                </div></a>
+                <a href="#"><div class="product man exp nike">
+                    <div class="prodimg">
+                        <img src="scarpe/airjordan4.png" alt="jordanhigh" width="170em" > <br>
+                    </div>
+                    <p>Air Jordan 4 High</p>
+                    <p>$195.00</p>
+                </div></a>
+                <a href="#"><div class="product woman medium other">
+                    <div class="prodimg">
+                        <img src="scarpe/newbalance320.png" alt="newbalance" width="170em" > <br>
+                    </div>
+                    <p>New Balance 620</p>
+                    <p>$70.00</p>
+                </div></a>
+                <a href="#"><div class="product woman medium other">
+                    <div class="prodimg">
+                        <img src="scarpe/vansdisney.png" alt="vans" width="170em" > <br>
+                    </div>
+                    <p>Vans Sk8-hi X Disney</p>
+                    <p>$100.00</p>
                 </div></a>
             </div>
         </section>
@@ -88,15 +165,17 @@
                     <img src="immagini/logowhite.png" alt="logo" width="150em" > <br>
                     <p>Authorised Reseller</p>
                 </div>
-                <div class="foot">
-                    <h5>About us</h5>
-                    <a href="#" class="ftlink">Who is Steven Black</a>
-                    <a href="#" class="ftlink">Join us</a>
-                </div>
-                <div class="foot">
-                    <h5>Need some help?</h5>
-                    <a href="#" class="ftlink">FAQ's</a>
-                    <a href="#" class="ftlink">Support</a>
+                <div class="links">
+                    <div class="foot linksbox">
+                        <h5>About us</h5>
+                        <a href="#">Who is Steven Black</a>
+                        <a href="#">Join us</a>
+                    </div>
+                    <div class="foot linksbox">
+                        <h5>Need some help?</h5>
+                        <a href="#">FAQ's</a>
+                        <a href="#">Support</a>
+                    </div>
                 </div>
                 <div class="foot form">
                     <h5>Contacting Form</h5>
@@ -114,8 +193,10 @@
                     <iconify-icon icon="ic:baseline-tiktok" width="24" height="24" class="tik"></iconify-icon>
                 </div>
             </div>
-            <p>© SB00.com All Rights Reserved</p>
+            <p>© 2024 SB00.com All Rights Reserved</p>
         </footer>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://kit.fontawesome.com/cc3bfee917.js" crossorigin="anonymous"></script>
+        <script src="script.js" type="text/javascript"></script>
     </body>
 </html>

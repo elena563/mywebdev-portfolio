@@ -23,14 +23,21 @@
                             <li><a href="index.html" class="link">Home</a></li>
                             <li><a href="sneakers.html" class="link">Sneakers</a></li>
                             <li><a href="streetwear.html" class="link">Streetwear</a></li>
-                            <li><a href="#sale" class="link">On Sale</a></li>
+                            <li><a href="index.html #sale" class="link">On Sale</a></li>
                             <!--nuove pagine per catalogo
                             dovranno avere un filtro per marca e prezzo-->
                         </ul>
                     </nav>
-                    <a href=""><img src="immagini/heart-thin-icon.png" alt="profile" height="25em" class="icon"></a>
-                    <a href=""><img src="immagini/cart-black-icon.png" alt="cart" height="25em" class="icon"></a>
-                    <!--<img src="https://i.ibb.co/6XbqwjD/menu.png" alt="menu" class="menu" onclick="menutoggle()">-->
+                    <div class="header-icons">
+                        <a href="#" class="icon"><i class="fa-regular fa-heart fa-xl" style="color: #1b1c1e;"></i></a>
+                        <a href="#" class="icon"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #1b1c1e;"></i></a>
+                        <label class="ham icon" for="ham">
+                            <input type="checkbox" id="ham" onclick=show()>
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </label>
+                    </div>
                 </div>
                 <div class="snk">
                     <h1>Streetwear</h1>
@@ -39,7 +46,7 @@
         </header>
         <section class="white store">
             <div class="filters">
-                <h3>Filter</h3>
+                <h3>Filters</h3>
                 <div class="fil">
                     <details>
                         <summary><h5>Gender</h5></summary>
@@ -68,25 +75,95 @@
                     <details>
                         <summary><h5>Price</h5></summary>
                         <input type="checkbox">Less than $50 <br>
-                        <input type="checkbox">$50-200 <br>
-                        <input type="checkbox">More than $200<br>
+                        <input type="checkbox">$50-100 <br>
+                        <input type="checkbox">More than $100<br>
                     </details>
                 </div>
             </div>
             <div class="cont container2">
-                <a href="#"><div class="product">
+                <a href="#"><div class="product man exp top other">
                     <div class="prodimg">
-                        <img src="scarpe/cap.png" alt="cap" width="150em" > <br>
+                        <img src="streetwear/thenorthface.png" alt="the north face jacket" width="140em" > <br>
+                    </div>
+                    <p>The North Face 1996 Retro Nuptse Jacket</p>
+                    <p>$120.00</p>
+                </div></a>
+                <a href="#"><div class="product man aff access nike">
+                    <div class="prodimg">
+                        <img src="streetwear/cap.png" alt="cap" width="150em" > <br>
                     </div>
                     <p>Nike baseball cap</p>
                     <p>$25.00</p>
                 </div></a>
-                <a href="#"><div class="product">
-                    <div class="prodimg tall">
-                        <img src="streetwear/jacket.png" alt="jacket" width="150em" > <br>
+                <a href="#"><div class="product man medium top nike">
+                    <div class="prodimg">
+                        <img src="streetwear/jacket.png" alt="jacket" width="120em" > <br>
                     </div>
                     <p>Nike White Jacket</p>
                     <p>$75.00</p>
+                </div></a>
+                <a href="#"><div class="product woman medium top adidas">
+                    <div class="prodimg">
+                        <img src="streetwear/pinkkiss.png" alt="adidas jacket" width="120em" > <br>
+                    </div>
+                    <p>Adidas Pink Kiss Jacket</p>
+                    <p>$73.00</p>
+                </div></a>
+                <a href="#"><div class="product man exp top bottom nike">
+                    <div class="prodimg">
+                        <img src="streetwear/jumpsuit.png" alt="nike jumpsuit" width="140em" > <br>
+                    </div>
+                    <p>Nike Jumpsuit</p>
+                    <p>$105.00</p>
+                </div></a>
+                <a href="#"><div class="product man medium top other">
+                    <div class="prodimg">
+                        <img src="streetwear/hoodie.png" alt="the north face hoodie" width="130em" > <br>
+                    </div>
+                    <p>The North Face Hoodie</p>
+                    <p>$60.00</p>
+                </div></a>
+                <a href="#"><div class="product man aff top adidas">
+                    <div class="prodimg">
+                        <img src="streetwear/polo.png" alt="Adidas polo" width="130em" > <br>
+                    </div>
+                    <p>Adidas Polo Shirt</p>
+                    <p>$19.00</p>
+                </div></a>
+                <a href="#"><div class="product woman aff top nike">
+                    <div class="prodimg">
+                        <img src="streetwear/sportbra.png" alt="nike sport bra" width="140em" > <br>
+                    </div>
+                    <p>Nike Sport Bra</p>
+                    <p>$24.00</p>
+                </div></a>
+                <a href="#"><div class="product man aff access other">
+                    <div class="prodimg">
+                        <img src="streetwear/ck.png" alt="calvin klein beanie" width="150em" > <br>
+                    </div>
+                    <p>Calvin Klein Beanie Hat</p>
+                    <p>$25.00</p>
+                </div></a>
+                <a href="#"><div class="product man medium top other">
+                    <div class="prodimg">
+                        <img src="streetwear/levisj.png" alt="levis jacket" width="150em" > <br>
+                    </div>
+                    <p>Levi's Denim Jacket</p>
+                    <p>$50.00</p>
+                </div></a>
+                <a href="#"><div class="product woman aff bottom adidas">
+                    <div class="prodimg">
+                        <img src="streetwear/pants.png" alt="Adidas pants" width="70em" > <br>
+                    </div>
+                    <p>Adidas Workout Pants</p>
+                    <p>$25.00</p>
+                </div></a>
+                <a href="#"><div class="product man aff bottom adidas">
+                    <div class="prodimg">
+                        <img src="streetwear/tierro.png" alt="Adidas shorts" width="120em" > <br>
+                    </div>
+                    <p>Adidas Tierro 13 Shorts</p>
+                    <p>$19.00</p>
                 </div></a>
             </div>
         </section>
@@ -96,15 +173,17 @@
                     <img src="immagini/logowhite.png" alt="logo" width="150em" > <br>
                     <p>Authorised Reseller</p>
                 </div>
-                <div class="foot">
-                    <h5>About us</h5>
-                    <a href="#" class="ftlink">Who is Steven Black</a>
-                    <a href="#" class="ftlink">Join us</a>
-                </div>
-                <div class="foot">
-                    <h5>Need some help?</h5>
-                    <a href="#" class="ftlink">FAQ's</a>
-                    <a href="#" class="ftlink">Support</a>
+                <div class="links">
+                    <div class="foot linksbox">
+                        <h5>About us</h5>
+                        <a href="#">Who is Steven Black</a>
+                        <a href="#">Join us</a>
+                    </div>
+                    <div class="foot linksbox">
+                        <h5>Need some help?</h5>
+                        <a href="#">FAQ's</a>
+                        <a href="#">Support</a>
+                    </div>
                 </div>
                 <div class="foot form">
                     <h5>Contacting Form</h5>
@@ -122,8 +201,10 @@
                     <iconify-icon icon="ic:baseline-tiktok" width="24" height="24" class="tik"></iconify-icon>
                 </div>
             </div>
-            <p>© SB00.com All Rights Reserved</p>
+            <p>© 2024 SB00.com All Rights Reserved</p>
         </footer>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://kit.fontawesome.com/cc3bfee917.js" crossorigin="anonymous"></script>
+        <script src="script.js" type="text/javascript"></script>
     </body>
 </html>
