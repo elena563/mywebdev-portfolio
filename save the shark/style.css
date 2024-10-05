@@ -7,11 +7,11 @@
     position: absolute;
     top: 8em;
 }
-#about, #store, .store-link, .container, #donation, #join{
-    margin: 4em;
+#about, #store, .container, #donation, #join{
+    margin: 4em 2em;
 }
 #store, .container, #donation{
-    margin: 5em;
+    margin: 5em 2em;
 }
 header{
     padding: 2em 2em 1em 2em;
@@ -21,8 +21,14 @@ header{
 .blue{
     background-color: #62B0FE;
 }
+.blue #menucont a:hover{
+    color: #f5f5fa;
+}
 .white{
-    background-color: #f5f5fa
+    background-color: #f5f5fa;
+}
+.white #menucont a:hover{
+    color: #62B0FE;
 }
 .flex-head{
     display: flex;
@@ -83,7 +89,7 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 10em 9em 5em 9em;
+    padding: 10em 4em 5em 4em;
     text-align: center;
 }
 .btn{
@@ -103,15 +109,19 @@ h2{
 }
 .flex-cont{
     display: flex;
-    gap: 5em;
+    gap: 3em;
 }
 #about img{
     width: 37%;
+    min-width: 350px;
     object-fit: cover;
 }
-:is(#about, #store, #donation) p, #about ul, #donation img{
+:is(#about, #donation) p, #about ul, #donation img{
     margin-top: 1rem;
     line-height: 2rem;
+}
+#store p{
+    margin: 1.5em 0 1.5em 0;
 }
 h3{
     font-size: 1.5em;
@@ -149,7 +159,7 @@ footer{
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-    gap:1em;
+    gap: 1em;
 }
 .flogo{
     font-size: 1.5em;
@@ -160,6 +170,14 @@ footer{
 }
 .foot{
     flex:1;
+    min-width: 100px;
+}
+.longer{
+    min-width: 170px;
+}
+.social{
+    display: flex;
+    gap: 0.7em;
 }
 .cr{
     opacity: 0.7;
@@ -194,15 +212,13 @@ iconify-icon:hover{
 .flex{
     display: flex;
     gap: 3em;
+    justify-content: center;
 }
 main{
     flex:2;
 }
-.shark-culture section ul{
+.shark-culture section ul, #about ul{
     list-style-position: inside;
-}
-.shark-culture section{
-    margin-top: 2rem;
 }
 #list a{
     display: block;
@@ -222,9 +238,7 @@ main{
 }
 #list{
     margin-bottom: 2em;
-}
-#sidebar{
-    flex: 1;
+    max-width: 350px;
 }
 .species{
     padding: 0;
@@ -243,7 +257,15 @@ main{
     list-style-type: none;
     padding-inline-start: 0;
 }
-.shark img, .shark .content{
+.word{
+    font-weight: bold;
+    color: #62B0FE;
+}
+.content2{
+    margin-bottom: 1em;
+    margin-top: 0.3em;
+}
+.shark img, .content{
     margin-top: 1em;
 }
 .shark img{
@@ -291,6 +313,7 @@ h4{
 }
 .store-link{
     text-align: center;
+    margin: 8em 4em 4em 4em;
 }
 .store-link a{
     width: max(200px, 13%);
@@ -298,23 +321,20 @@ h4{
 /*merch*/
 .container1{
     display: grid;
-    grid-template: repeat(3, 31.6vw) / repeat(4, 23.5%);
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
     width: 100%;
-    gap: 1em;
+    gap: 1.5em;
     margin: 4em 0em;
 }
 .prodimg{
     padding: 3em 1.5em 2em 1.5em;
     background-color: #e5e6e8;
     width: 100%;
-    height: 60%;
+    height: 23vw;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0;
-  }
-  .prodimg img{
-    width: 90%;
   }
   .product p{
     text-align: center;
@@ -323,7 +343,9 @@ h4{
     border: solid 0.08em transparent;
     flex-shrink: 0;
     width: 100%;
-    height: 100%;
+  }
+  .product:hover{
+    border: solid 0.08em #24337D;
   }
 #card-data, #personal-data, .short{
     display: flex;
@@ -418,15 +440,26 @@ input[type="text"], input[type="month"]{
     border: none;
 }
 /*responsive*/
-@media (max-width: 465px) {
-    .links{
-        flex-direction: column;
-    }
+@media (max-width: 470px) {
     h1{
-        display: none;
+        font-size: 25px;
+    }
+    #logo img{
+        width: 25px;
+        height: 25px;
     }
     .svg{
-        top: 6.8em;
+        top: 6.5em;
+    }
+    .container1{
+        display: flex;
+        flex-direction: column;
+    }
+    .container1 a{
+        height: 100vw;
+    }
+    .prodimg{
+        height: 75vw;
     }
 }
 @media (max-width: 350px){
@@ -441,28 +474,23 @@ input[type="text"], input[type="month"]{
     }
 }
 @media (max-width: 400px){
-.container1{
-    display: flex;
-    flex-direction: column;
+    h1{
+        font-size: 18px;
+    }
+    #logo img{
+        width: 18px;
+        height: 18px;
+    }
+    .svg{
+        top: 6em;
+    }
 }
-.container1 a{
-    height: 120vw;
-}
-.prodimg{
-    height: 70%;
-}
-}
-@media (max-width: 500px) {
+@media (max-width: 515px) {
+    .links{
+        flex-direction: column;
+    }
     #store{
         margin: 5em 1.5em;
-    }
-    .flex-cont{
-        flex-direction: column;
-        align-items: center;
-    }
-    #about img{
-        width: 100%;
-        height: auto;
     }
 }
 @media (max-width: 600px) {
@@ -471,17 +499,26 @@ input[type="text"], input[type="month"]{
     }
 }
 @media (max-width: 700px) {
+    .flex-cont{
+        flex-direction: column;
+        align-items: center;
+    }
+    #about img{
+        width: 100%;
+        height: auto;
+    }
     #lowheader{
         padding: 8em 2em 4em 2em
     }
     #about, .container, .store-link{
-        margin: 4em 2em 4em 2em;
+        margin: 4em 1em 4em 1em;
+    }
+    .shark{
+        padding-left: 1em;
+        padding-right: 1em;
     }
     .flex-cont{
         gap: 2em;
-    }
-    .flex{
-        flex-direction: column;
     }
     .flex-shark{
         flex-direction: column;
@@ -493,11 +530,38 @@ input[type="text"], input[type="month"]{
         align-self: center;
     }
     #list{
-        max-width: 400px;
         text-align: center;
+    }
+}
+@media (max-width: 800px)and (min-width: 471px) {
+    .container1{
+        grid-template: repeat(6, 1fr) / repeat(2, 1fr);
+    }
+    .prodimg{
+        height: 40vw;
+    }
+}
+@media (max-width: 800px)and (min-width: 471px) {
+    .svg{
+        top: 7.1em;
+    }
+}
+@media (max-width: 800px) {
+    .flex{
+        flex-direction: column;
     }
     #sidebar{
         align-self: center;
+    }
+    .flex-col{
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+    }
+    .data{
+        width: 65%;
+        max-width: 400px;
+        min-width: 200px;
     }
     #ftcontainer{
         flex-direction: column;
@@ -507,27 +571,6 @@ input[type="text"], input[type="month"]{
     }
     .ftbtn{
         width: 200px;
-    }
-}
-@media (max-width: 800px)and (min-width: 401px) {
-    .container1{
-        grid-template: repeat(6, 64.5vw) / repeat(2, 48%);
-    }
-}
-@media (max-width: 800px)and (min-width: 466px) {
-    .svg{
-        top: 7.1em;
-    }
-}
-@media (max-width: 800px) {
-    .flex-col{
-        flex-direction: column;
-        gap: 2em;
-        align-items: center;
-    }
-    .data{
-        width: 65%;
-        min-width: 200px;
     }
     /*hamburger menu*/
     #menucont ul{
@@ -612,8 +655,17 @@ input[type="text"], input[type="month"]{
         gap:1em;
     }
 }
-@media (max-width: 900px) and (min-width: 701px) {
+@media (max-width: 1000px) and (min-width: 701px) {
     .container1{
-        grid-template: repeat(4, 43vw) / repeat(3, 32%);
+        grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    }
+    .prodimg{
+        height: 27vw;
+    }
+}
+@media (min-width: 1400px) {
+    #about img{
+        max-height: 550px;
+        min-width: 37%
     }
 }

@@ -245,17 +245,12 @@ footer{
   height: 500px;
 }
 .prodimg{
-  
   background-color: #e5e6e8;
   height: 14em;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.tall{
-  padding: 1em 1.5em 9em 1.5em;
 }
 .product p{
   text-align: center;
