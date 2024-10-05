@@ -10,7 +10,7 @@ body{
 	src: local('poppins'), url('Poppins-Bold.otf') format('truetype');
 	}
   @font-face {
-    font-family: 'Cooper Hewitt Book';
+    font-family: 'Cooper Hewitt';
     src: local('Cooper Hewitt Book'), url('CooperHewitt-Book.otf') format('truetype');
   }
   
