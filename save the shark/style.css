@@ -353,12 +353,13 @@ h4{
 .short{
     gap: 6rem;
 }
-#donation-data, #card-data fieldset, .joinc form{
+#donation-data, .joinc form{
     display: flex;
     flex-direction: column;
 }
 #card-data fieldset{
     gap: 0.5rem;
+    display: flex;
     justify-content: space-between;
 }
 :is(#card-data, #personal-data) fieldset{
@@ -497,20 +498,35 @@ input[type="text"], input[type="month"]{
     .shark{
         padding: 2em;
     }
+    .card-data{
+        flex-direction: column;
+    }
+    .personal-data{
+        flex-direction: column;
+    }
 }
 @media (max-width: 700px) {
     .flex-cont{
         flex-direction: column;
         align-items: center;
     }
-    #about img{
+    .joinc form{
+        width: 100%;
+    }
+    #about img, #join img, #donation img{
         width: 100%;
         height: auto;
     }
     #lowheader{
-        padding: 8em 2em 4em 2em
+        padding: 7em 2em 4em 2em
     }
-    #about, .container, .store-link{
+    header{
+        padding: 1em;
+    }
+    footer{
+        padding: 2em 1em 1em 1em;
+    }
+    #about, .container, .store-link, #store, #donation, #join{
         margin: 4em 1em 4em 1em;
     }
     .shark{
@@ -559,7 +575,7 @@ input[type="text"], input[type="month"]{
         align-items: center;
     }
     .data{
-        width: 65%;
+        width: 70%;
         max-width: 400px;
         min-width: 200px;
     }
@@ -578,7 +594,6 @@ input[type="text"], input[type="month"]{
         gap: 2em;
         flex-direction: column;  
         align-items: flex-start;
-        padding-left: 2em;
     }
     .header-icons{
         display: flex;
@@ -586,7 +601,7 @@ input[type="text"], input[type="month"]{
     }
     #menucont{
         display: block;
-        width: min(70%, 350px);
+        width: min(70%, 300px);
         position: absolute;
         top: 90px;
         left: 0;
